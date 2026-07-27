@@ -5,7 +5,6 @@ import { Newsletter } from "@/components/forms/Newsletter";
 import {
   LinkedInIcon,
   InstagramIcon,
-  YouTubeIcon,
   WhatsAppIcon,
 } from "@/components/ui/Icons";
 import { footerNav } from "@/data/nav";
@@ -63,7 +62,6 @@ export function Footer() {
             {[
               { href: site.social.linkedin, label: "LinkedIn", Icon: LinkedInIcon },
               { href: site.social.instagram, label: "Instagram", Icon: InstagramIcon },
-              { href: site.social.youtube, label: "YouTube", Icon: YouTubeIcon },
               { href: whatsappLink(), label: "WhatsApp", Icon: WhatsAppIcon },
             ].map(({ href, label, Icon }) => (
               <a

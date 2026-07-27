@@ -14,7 +14,7 @@ export function organizationSchema() {
     image: `${site.url}/images/og-default.jpg`,
     logo: `${site.url}/logo-mark.svg`,
     areaServed: "IN",
-    sameAs: [site.social.linkedin, site.social.instagram, site.social.youtube],
+    sameAs: [site.social.linkedin, site.social.instagram],
   };
 }
 

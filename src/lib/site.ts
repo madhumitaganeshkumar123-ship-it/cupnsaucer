@@ -13,7 +13,6 @@ export const site = {
   social: {
     linkedin: "https://www.linkedin.com/in/cupnsaucer/",
     instagram: "https://www.instagram.com/cupnsaucer.in/",
-    youtube: "https://www.youtube.com/@cupnsaucer",
   },
 } as const;
 
