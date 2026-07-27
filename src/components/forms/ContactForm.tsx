@@ -4,10 +4,33 @@ import { useState } from "react";
 import { Label, Input, Textarea } from "./Field";
 import { Check } from "@/components/ui/Icons";
 
-export function ContactForm() {
-  const [done, setDone] = useState(false);
+const FORMSPREE_URL = "https://formspree.io/f/xlgqalnd";
 
-  if (done) {
+export function ContactForm() {
+  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("loading");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("_subject", "New message from Contact page — Cup N Saucer");
+
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("done");
+    } catch {
+      setStatus("error");
+    }
+  }
+
+  if (status === "done") {
     return (
       <div className="rounded-2xl border border-line bg-cream-deep/40 p-10 text-center">
         <span className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 text-gold">
@@ -22,7 +45,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className="grid gap-5">
+    <form onSubmit={handleSubmit} className="grid gap-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <Label htmlFor="c-name">Full name</Label>
@@ -47,16 +70,18 @@ export function ContactForm() {
         <Label htmlFor="c-message">How can we help?</Label>
         <Textarea id="c-message" name="message" placeholder="Tell us about your business and what you're trying to achieve." />
       </div>
+
+      {status === "error" && (
+        <p className="text-sm text-red-600">Something went wrong sending your message. Please try again.</p>
+      )}
+
       <button
-        type="button"
-        onClick={() => setDone(true)}
-        className="mt-1 inline-flex w-fit items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-medium text-cream transition-colors hover:bg-gold-dark"
+        type="submit"
+        disabled={status === "loading"}
+        className="mt-1 inline-flex w-fit items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-medium text-cream transition-colors hover:bg-gold-dark disabled:opacity-60"
       >
-        Send message
+        {status === "loading" ? "Sending…" : "Send message"}
       </button>
-      <p className="text-xs text-taupe-light">
-        Hook this up to an API route or form service (Formspree, Resend, etc.) in production.
-      </p>
-    </div>
+    </form>
   );
 }
