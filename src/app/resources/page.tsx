@@ -32,7 +32,7 @@ export default function ResourcesPage() {
                   {r.description}
                 </p>
                 <div className="mt-7">
-                  <LeadCaptureForm resourceTitle={r.title} />
+                  <LeadCaptureForm resourceTitle={r.title} resourceSlug={r.slug} />
                 </div>
               </div>
             </Reveal>
