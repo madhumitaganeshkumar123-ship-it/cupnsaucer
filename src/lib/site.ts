@@ -12,7 +12,7 @@ export const site = {
   whatsapp: "916379140626",
   social: {
     linkedin: "https://www.linkedin.com/in/cupnsaucer/",
-    instagram: "https://www.instagram.com/cupnsaucer",
+    instagram: "https://www.instagram.com/cupnsaucer.in/",
     youtube: "https://www.youtube.com/@cupnsaucer",
   },
 } as const;
