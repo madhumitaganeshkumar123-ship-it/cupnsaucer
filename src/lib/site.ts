@@ -5,21 +5,13 @@ export const site = {
   description:
     "Cup N Saucer is a business growth consultancy that helps companies build strategy, systems, people, processes, and performance — turning vision into sustainable, structured growth.",
   // Update these to your live values before launch.
-  url: "https://www.cupnsaucer.in",
-  email: "hello@cupnsaucer.in",
-  phone: "+91 90000 00000",
-  phoneHref: "+919000000000",
-  whatsapp: "919000000000",
-  address: {
-    line1: "Cup N Saucer Advisory",
-    line2: "Anna Salai",
-    city: "Chennai",
-    region: "Tamil Nadu",
-    postalCode: "600002",
-    country: "India",
-  },
+  url: "https://www.cupnsaucer.co.in",
+  email: "cupnsaucer26@gmail.com",
+  phone: "+91 63791 40626",
+  phoneHref: "+916379140626",
+  whatsapp: "916379140626",
   social: {
-    linkedin: "https://www.linkedin.com/company/cupnsaucer",
+    linkedin: "https://www.linkedin.com/in/cupnsaucer/",
     instagram: "https://www.instagram.com/cupnsaucer",
     youtube: "https://www.youtube.com/@cupnsaucer",
   },

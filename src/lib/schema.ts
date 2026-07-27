@@ -14,14 +14,6 @@ export function organizationSchema() {
     image: `${site.url}/images/og-default.jpg`,
     logo: `${site.url}/logo-mark.svg`,
     areaServed: "IN",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: `${site.address.line1}, ${site.address.line2}`,
-      addressLocality: site.address.city,
-      addressRegion: site.address.region,
-      postalCode: site.address.postalCode,
-      addressCountry: site.address.country,
-    },
     sameAs: [site.social.linkedin, site.social.instagram, site.social.youtube],
   };
 }

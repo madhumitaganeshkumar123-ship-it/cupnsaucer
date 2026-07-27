@@ -6,7 +6,6 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import {
   MailIcon,
   PhoneIcon,
-  PinIcon,
   WhatsAppIcon,
   LinkedInIcon,
 } from "@/components/ui/Icons";
@@ -15,7 +14,7 @@ import { site, whatsappLink } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Cup N Saucer. Reach us by message, WhatsApp, email, or phone, or visit our office in Chennai, Tamil Nadu.",
+    "Get in touch with Cup N Saucer. Reach us by message, WhatsApp, email, or phone.",
 };
 
 export default function ContactPage() {
@@ -75,18 +74,6 @@ export default function ContactPage() {
               </span>
             </a>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-line bg-cream p-6">
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold">
-                <PinIcon className="h-6 w-6" />
-              </span>
-              <span>
-                <span className="block text-xs uppercase tracking-eyebrow text-taupe">Office</span>
-                <span className="text-ink">
-                  {site.address.line2}, {site.address.city}, {site.address.region}
-                </span>
-              </span>
-            </div>
-
             <a
               href={site.social.linkedin}
               target="_blank"
@@ -101,17 +88,6 @@ export default function ContactPage() {
                 <span className="text-ink">Connect with us</span>
               </span>
             </a>
-
-            {/* Map placeholder — drop in a Google Maps embed iframe here. */}
-            <div className="flex h-56 items-center justify-center rounded-2xl border border-dashed border-line bg-cream-deep/40 text-center text-sm text-taupe-light">
-              <div>
-                <PinIcon className="mx-auto mb-2 h-6 w-6 text-gold/50" />
-                Map embed goes here
-                <span className="mt-1 block text-xs">
-                  Replace with a Google Maps iframe for {site.address.city}
-                </span>
-              </div>
-            </div>
           </Reveal>
         </Container>
       </section>

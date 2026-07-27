@@ -220,6 +220,28 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "sales-training",
+    category: "Sales & Distribution",
+    title: "Sales Training",
+    summary:
+      "Hands-on training that turns your sales process into a skill your team actually has.",
+    problem:
+      "A great sales process on paper doesn't help if reps haven't internalized how to run it — objection handling, discovery, and negotiation stay inconsistent, and ramp time for new hires drags on.",
+    solution:
+      "We deliver practical, role-specific sales training — covering discovery, objection handling, negotiation, and pipeline discipline — built around your actual process and real deal scenarios, not generic theory. Training is reinforced with coaching and role-play so it sticks.",
+    methodology: [
+      "Assess current sales skill gaps and call/deal patterns",
+      "Design a training curriculum mapped to your sales stages",
+      "Run live workshops with role-play on real scenarios",
+      "Reinforce with manager coaching guides and follow-up sessions",
+    ],
+    outcomes: [
+      "A team that runs the sales process consistently, not just knows it",
+      "Faster ramp-up for new sales hires",
+      "Higher win rates on qualified opportunities",
+    ],
+  },
+  {
     slug: "performance-management-systems",
     category: "Organizational Development",
     title: "Performance Management Systems",
