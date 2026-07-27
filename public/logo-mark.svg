@@ -1,0 +1,22 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cup N Saucer mark">
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <!-- rising bars (growth) -->
+    <g stroke-width="7">
+      <line x1="84" y1="118" x2="84" y2="96"/>
+      <line x1="100" y1="118" x2="100" y2="80"/>
+      <line x1="116" y1="118" x2="116" y2="62"/>
+      <line x1="132" y1="118" x2="132" y2="44"/>
+    </g>
+    <!-- cup body sweep -->
+    <path d="M52 112 C 56 150, 92 168, 120 150 C 138 139, 144 124, 145 112"
+          stroke-width="8"/>
+    <!-- cup top rim / coffee surface arc -->
+    <path d="M50 112 C 78 100, 120 100, 148 112" stroke-width="7"/>
+    <!-- handle -->
+    <path d="M148 112 C 172 108, 176 134, 152 138" stroke-width="7"/>
+    <!-- ambient steam swoop, echoing the logo -->
+    <path d="M40 96 C 30 78, 44 66, 64 70" stroke-width="6" opacity="0.85"/>
+    <!-- saucer rule -->
+    <path d="M44 158 C 80 170, 124 170, 160 158" stroke-width="5" opacity="0.55"/>
+  </g>
+</svg>

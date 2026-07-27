@@ -1,0 +1,120 @@
+import type { Metadata } from "next";
+import { Container } from "@/components/ui/Container";
+import { PageHeader } from "@/components/ui/PageHeader";
+import { Reveal } from "@/components/ui/Reveal";
+import { ContactForm } from "@/components/forms/ContactForm";
+import {
+  MailIcon,
+  PhoneIcon,
+  PinIcon,
+  WhatsAppIcon,
+  LinkedInIcon,
+} from "@/components/ui/Icons";
+import { site, whatsappLink } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with Cup N Saucer. Reach us by message, WhatsApp, email, or phone, or visit our office in Chennai, Tamil Nadu.",
+};
+
+export default function ContactPage() {
+  return (
+    <>
+      <PageHeader
+        eyebrow="Contact"
+        title="Let's start a conversation"
+        intro="Tell us about your business and what you're trying to achieve. We'll respond within one business day."
+      />
+
+      <section className="py-20 lg:py-28">
+        <Container className="grid gap-14 lg:grid-cols-[1fr_0.85fr]">
+          <Reveal>
+            <ContactForm />
+          </Reveal>
+
+          <Reveal delay={0.1} className="space-y-4">
+            <a
+              href={whatsappLink("Hello Cup N Saucer, I'd like to discuss growing my business.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 rounded-2xl border border-line bg-cream p-6 transition-colors hover:border-gold/40"
+            >
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#25D366]/10 text-[#1da851]">
+                <WhatsAppIcon className="h-6 w-6" />
+              </span>
+              <span>
+                <span className="block text-xs uppercase tracking-eyebrow text-taupe">WhatsApp</span>
+                <span className="text-ink">Message us instantly</span>
+              </span>
+            </a>
+
+            <a
+              href={`mailto:${site.email}`}
+              className="group flex items-center gap-4 rounded-2xl border border-line bg-cream p-6 transition-colors hover:border-gold/40"
+            >
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold">
+                <MailIcon className="h-6 w-6" />
+              </span>
+              <span>
+                <span className="block text-xs uppercase tracking-eyebrow text-taupe">Email</span>
+                <span className="text-ink">{site.email}</span>
+              </span>
+            </a>
+
+            <a
+              href={`tel:${site.phoneHref}`}
+              className="group flex items-center gap-4 rounded-2xl border border-line bg-cream p-6 transition-colors hover:border-gold/40"
+            >
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold">
+                <PhoneIcon className="h-6 w-6" />
+              </span>
+              <span>
+                <span className="block text-xs uppercase tracking-eyebrow text-taupe">Phone</span>
+                <span className="text-ink">{site.phone}</span>
+              </span>
+            </a>
+
+            <div className="flex items-center gap-4 rounded-2xl border border-line bg-cream p-6">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold">
+                <PinIcon className="h-6 w-6" />
+              </span>
+              <span>
+                <span className="block text-xs uppercase tracking-eyebrow text-taupe">Office</span>
+                <span className="text-ink">
+                  {site.address.line2}, {site.address.city}, {site.address.region}
+                </span>
+              </span>
+            </div>
+
+            <a
+              href={site.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 rounded-2xl border border-line bg-cream p-6 transition-colors hover:border-gold/40"
+            >
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold">
+                <LinkedInIcon className="h-6 w-6" />
+              </span>
+              <span>
+                <span className="block text-xs uppercase tracking-eyebrow text-taupe">LinkedIn</span>
+                <span className="text-ink">Connect with us</span>
+              </span>
+            </a>
+
+            {/* Map placeholder — drop in a Google Maps embed iframe here. */}
+            <div className="flex h-56 items-center justify-center rounded-2xl border border-dashed border-line bg-cream-deep/40 text-center text-sm text-taupe-light">
+              <div>
+                <PinIcon className="mx-auto mb-2 h-6 w-6 text-gold/50" />
+                Map embed goes here
+                <span className="mt-1 block text-xs">
+                  Replace with a Google Maps iframe for {site.address.city}
+                </span>
+              </div>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+    </>
+  );
+}
