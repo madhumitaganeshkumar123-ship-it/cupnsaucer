@@ -8,13 +8,14 @@ import {
   PhoneIcon,
   WhatsAppIcon,
   LinkedInIcon,
+  PinIcon,
 } from "@/components/ui/Icons";
 import { site, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Cup N Saucer. Reach us by message, WhatsApp, email, or phone.",
+    "Get in touch with Cup N Saucer, the best marketing consultancy in Madurai. Reach us by message, WhatsApp, email, or phone.",
 };
 
 export default function ContactPage() {
@@ -88,6 +89,16 @@ export default function ContactPage() {
                 <span className="text-ink">Connect with us</span>
               </span>
             </a>
+
+            <div className="flex items-center gap-4 rounded-2xl border border-line bg-cream p-6">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold">
+                <PinIcon className="h-6 w-6" />
+              </span>
+              <span>
+                <span className="block text-xs uppercase tracking-eyebrow text-taupe">Based in</span>
+                <span className="text-ink">{site.location.display}</span>
+              </span>
+            </div>
           </Reveal>
         </Container>
       </section>

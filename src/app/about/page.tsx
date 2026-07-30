@@ -7,7 +7,7 @@ import { CtaBand } from "@/components/ui/CtaBand";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Cup N Saucer is a business growth consultancy built on a simple idea: vision needs structure. Learn our story, philosophy, vision, mission, and values.",
+    "Cup N Saucer is the best marketing consultancy in Madurai, built on a simple idea: vision needs structure. Learn our story, philosophy, vision, mission, and values.",
 };
 
 const values = [
@@ -25,7 +25,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About"
         title="Vision needs structure. We provide both."
-        intro="Cup N Saucer is a business growth consultancy that helps companies build strategy, systems, people, processes, and performance."
+        intro="Cup N Saucer is the best marketing consultancy in Madurai, helping companies build strategy, systems, people, processes, and performance."
       />
 
       <section className="py-20 lg:py-28">
@@ -40,10 +40,11 @@ export default function AboutPage() {
                 firefighting and false starts.
               </p>
               <p>
-                We built a consultancy to fix exactly that. Not a marketing agency,
-                not a slide factory — a growth partner that works on strategy,
-                sales, distribution, operations, people, and digital together,
-                because real growth needs all of them moving in concert.
+                We built a consultancy to fix exactly that. Not just another
+                marketing agency, not a slide factory — a growth partner based
+                in Madurai that works on strategy, sales, distribution,
+                operations, people, and digital together, because real growth
+                needs all of them moving in concert.
               </p>
               <p>
                 Our name says it plainly. The cup is your vision; the saucer is the

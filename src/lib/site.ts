@@ -10,6 +10,12 @@ export const site = {
   phone: "+91 63791 40626",
   phoneHref: "+916379140626",
   whatsapp: "916379140626",
+  location: {
+    city: "Madurai",
+    region: "Tamil Nadu",
+    country: "IN",
+    display: "Madurai, Tamil Nadu",
+  },
   social: {
     linkedin: "https://www.linkedin.com/in/cupnsaucer/",
     instagram: "https://www.instagram.com/cupnsaucer.in/",

@@ -13,7 +13,17 @@ export function organizationSchema() {
     telephone: site.phone,
     image: `${site.url}/images/og-default.jpg`,
     logo: `${site.url}/logo-mark.svg`,
-    areaServed: "IN",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: site.location.city,
+      addressRegion: site.location.region,
+      addressCountry: site.location.country,
+    },
+    areaServed: [
+      { "@type": "City", name: site.location.city },
+      { "@type": "State", name: site.location.region },
+      "IN",
+    ],
     sameAs: [site.social.linkedin, site.social.instagram],
   };
 }
@@ -51,7 +61,7 @@ export function serviceSchema(name: string, description: string, path: string) {
     description,
     url: `${site.url}${path}`,
     provider: { "@type": "Organization", name: site.name, url: site.url },
-    areaServed: "IN",
+    areaServed: [{ "@type": "City", name: site.location.city }, "IN"],
   };
 }
 

@@ -30,7 +30,7 @@ export default function TermsPage() {
           "The website and its content are provided on an 'as is' basis. To the extent permitted by law, we are not liable for any loss arising from reliance on the information provided here.",
         ]},
         { heading: "Governing law", body: [
-          "These terms are governed by the laws of India, with jurisdiction in the courts of Chennai, Tamil Nadu.",
+          "These terms are governed by the laws of India, with jurisdiction in the courts of Madurai, Tamil Nadu.",
         ]},
         { heading: "Contact", body: [
           `Questions about these terms can be sent to ${site.email}.`,

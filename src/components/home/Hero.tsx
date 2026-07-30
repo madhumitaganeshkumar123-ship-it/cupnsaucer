@@ -45,7 +45,7 @@ export function Hero() {
             transition={{ duration: 0.6, ease }}
             className="eyebrow mb-6"
           >
-            Business Growth Consultancy
+            Best Marketing Consultancy in Madurai
           </motion.p>
 
           <h1 className="text-display-xl">
@@ -75,9 +75,10 @@ export function Hero() {
             transition={{ duration: 0.7, ease, delay: 0.5 }}
             className="mt-7 max-w-xl text-base leading-relaxed text-taupe sm:text-lg"
           >
-            We help businesses transform ideas into sustainable growth through
-            strategy, sales excellence, marketing, operational systems,
-            organizational development, and digital transformation.
+            As the best marketing consultancy in Madurai, we help businesses
+            transform ideas into sustainable growth through strategy, sales
+            excellence, marketing, operational systems, organizational
+            development, and digital transformation.
           </motion.p>
 
           <motion.div
