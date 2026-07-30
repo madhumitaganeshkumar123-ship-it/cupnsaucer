@@ -95,7 +95,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <div className="relative mx-auto aspect-square w-full max-w-md lg:max-w-none lg:translate-x-10 xl:translate-x-16">
+        <div className="relative mx-auto aspect-square w-full max-w-[220px] sm:max-w-xs md:max-w-sm lg:max-w-none lg:translate-x-10 xl:translate-x-16">
           <AnimatedMark />
         </div>
       </Container>
