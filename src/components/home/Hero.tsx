@@ -69,16 +69,28 @@ export function Hero() {
             ))}
           </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.5 }}
-            className="mt-7 max-w-xl text-base leading-relaxed text-taupe sm:text-lg"
-          >
-            We help businesses transform ideas into sustainable growth through
-            strategy, sales excellence, marketing, operational systems,
-            organizational development, and digital transformation.
-          </motion.p>
+          <div className="mt-7 flex items-start justify-between gap-6 lg:block">
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease, delay: 0.5 }}
+              className="min-w-0 max-w-xl flex-1 text-base leading-relaxed text-taupe sm:text-lg"
+            >
+              We help businesses transform ideas into sustainable growth
+              through strategy, sales excellence, marketing, operational
+              systems, organizational development, and digital
+              transformation.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, ease, delay: 0.55 }}
+              className="relative h-14 w-14 shrink-0 sm:h-16 sm:w-16 lg:hidden"
+            >
+              <AnimatedMark />
+            </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
@@ -95,7 +107,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <div className="relative mx-auto aspect-square w-full max-w-[220px] sm:max-w-xs md:max-w-sm lg:max-w-none lg:translate-x-10 xl:translate-x-16">
+        <div className="relative mx-auto hidden aspect-square w-full lg:block lg:max-w-none lg:translate-x-10 xl:translate-x-16">
           <AnimatedMark />
         </div>
       </Container>
