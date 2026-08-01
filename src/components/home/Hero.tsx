@@ -48,17 +48,7 @@ export function Hero() {
             Business Growth Consultancy
           </motion.p>
 
-          <div className="flex items-start gap-4 lg:block">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, ease, delay: 0.3 }}
-              className="relative mt-1 h-12 w-12 shrink-0 sm:h-14 sm:w-14 lg:hidden"
-            >
-              <AnimatedMark />
-            </motion.div>
-
-            <h1 className="text-display-xl">
+          <h1 className="text-display-xl">
             {["Where Vision", "Meets Structure"].map((line, i) => (
               <span key={line} className="block overflow-hidden">
                 <motion.span
@@ -77,8 +67,7 @@ export function Hero() {
                 </motion.span>
               </span>
             ))}
-            </h1>
-          </div>
+          </h1>
 
           <motion.p
             initial={{ opacity: 0, y: 14 }}
