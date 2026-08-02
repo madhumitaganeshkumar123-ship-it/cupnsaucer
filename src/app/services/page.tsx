@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Strategy, sales and distribution, organizational development, marketing, operational excellence, and AI & digital transformation from Madurai's best marketing consultancy — explore the full Cup N Saucer service catalogue.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

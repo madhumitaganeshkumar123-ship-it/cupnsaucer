@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Case Studies",
   description:
     "Representative engagements from Cup N Saucer — the challenge, our approach, implementation, and the results that followed.",
+  alternates: { canonical: "/case-studies" },
 };
 
 export default function CaseStudiesPage() {

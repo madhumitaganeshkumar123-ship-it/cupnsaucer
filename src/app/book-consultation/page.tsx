@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Book a Strategy Call",
   description:
     "Book a focused strategy call with Cup N Saucer. Share a few details about your business and we'll prepare for a conversation about your growth.",
+  alternates: { canonical: "/book-consultation" },
 };
 
 const expect = [

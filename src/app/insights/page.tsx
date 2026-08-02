@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Insights",
   description:
     "Business growth insights from Cup N Saucer — on strategy, sales, distribution, marketing, branding, leadership, AI, and operations.",
+  alternates: { canonical: "/insights" },
 };
 
 export default function InsightsPage() {

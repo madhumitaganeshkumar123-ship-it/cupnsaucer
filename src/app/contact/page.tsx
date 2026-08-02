@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with Cup N Saucer, the best marketing consultancy in Madurai. Reach us by message, WhatsApp, email, or phone.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

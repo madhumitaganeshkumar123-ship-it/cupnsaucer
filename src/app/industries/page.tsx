@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Industries",
   description:
     "We work with startups, SMEs, family businesses, educational institutions, retail, and manufacturing — adapting our growth methods to each.",
+  alternates: { canonical: "/industries" },
 };
 
 export default function IndustriesPage() {

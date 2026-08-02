@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Resources",
   description:
     "Free business growth resources from Cup N Saucer — checklists, frameworks, and assessments to help you grow with structure. Download with your email.",
+  alternates: { canonical: "/resources" },
 };
 
 export default function ResourcesPage() {

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "FAQ",
   description:
     "Answers to common questions about working with Cup N Saucer — industries, implementation support, sales, distribution, startups, AI consulting, and how engagements work.",
+  alternates: { canonical: "/faq" },
 };
 
 export default function FaqPage() {

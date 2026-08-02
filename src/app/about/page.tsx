@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Cup N Saucer is the best marketing consultancy in Madurai, built on a simple idea: vision needs structure. Learn our story, philosophy, vision, mission, and values.",
+  alternates: { canonical: "/about" },
 };
 
 const values = [
