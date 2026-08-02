@@ -446,15 +446,26 @@ export function getService(slug: string) {
 }
 
 export function getRelatedServices(slug: string, count = 3) {
-  const current = getService(slug);
-  if (!current) return [];
-  const sameCategory = services.filter(
-    (s) => s.slug !== slug && s.category === current.category,
-  );
-  const rest = services.filter(
-    (s) => s.slug !== slug && s.category !== current.category,
-  );
-  return [...sameCategory, ...rest].slice(0, count);
+  const currentIndex = services.findIndex((s) => s.slug === slug);
+  if (currentIndex === -1) return [];
+  const current = services[currentIndex];
+  // Walk the list starting from the *next* item and wrapping around, so
+  // link distribution is balanced instead of always favoring the first
+  // few entries in the array (which would otherwise starve later items
+  // of inbound internal links).
+  const circular = services
+    .slice(currentIndex + 1)
+    .concat(services.slice(0, currentIndex));
+  const sameCategory = circular.filter((s) => s.category === current.category);
+  const rest = circular.filter((s) => s.category !== current.category);
+  // Cap same-category picks so at least one slot always goes to a
+  // different category. Otherwise services in a category that's always
+  // fully "satisfied" by same-category matches (e.g. every page in a
+  // 4-service category picking its 3 category-mates) would never link to
+  // services in smaller or single-entry categories, leaving those orphaned.
+  const samePicks = sameCategory.slice(0, Math.min(2, count - 1));
+  const restPicks = rest.slice(0, count - samePicks.length);
+  return [...samePicks, ...restPicks];
 }
 
 export const serviceCategories = Array.from(

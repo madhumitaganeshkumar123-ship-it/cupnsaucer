@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return [...staticPaths, ...dynamicPaths].map((path) => ({
-    url: `${site.url}${path}`,
+    url: path === "" ? `${site.url}/` : `${site.url}${path}`,
     lastModified: now,
     changeFrequency: path === "" ? "weekly" : "monthly",
     priority: path === "" ? 1 : path.split("/").length > 2 ? 0.6 : 0.8,

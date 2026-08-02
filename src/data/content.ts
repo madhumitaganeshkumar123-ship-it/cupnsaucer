@@ -387,13 +387,22 @@ export function getInsight(slug: string) {
 }
 
 export function getRelatedInsights(slug: string, count = 3) {
-  const current = getInsight(slug);
-  if (!current) return [];
-  const sameCategory = insights.filter(
-    (i) => i.slug !== slug && i.category === current.category,
-  );
-  const rest = insights.filter(
-    (i) => i.slug !== slug && i.category !== current.category,
-  );
-  return [...sameCategory, ...rest].slice(0, count);
+  const currentIndex = insights.findIndex((i) => i.slug === slug);
+  if (currentIndex === -1) return [];
+  const current = insights[currentIndex];
+  // Walk the list starting from the *next* item and wrapping around, so
+  // link distribution is balanced instead of always favoring the first
+  // few entries in the array (which would otherwise starve later items
+  // of inbound internal links).
+  const circular = insights
+    .slice(currentIndex + 1)
+    .concat(insights.slice(0, currentIndex));
+  const sameCategory = circular.filter((i) => i.category === current.category);
+  const rest = circular.filter((i) => i.category !== current.category);
+  // Cap same-category picks so at least one slot always goes to a
+  // different category, keeping link distribution balanced even if
+  // category sizes are uneven.
+  const samePicks = sameCategory.slice(0, Math.min(2, count - 1));
+  const restPicks = rest.slice(0, count - samePicks.length);
+  return [...samePicks, ...restPicks];
 }

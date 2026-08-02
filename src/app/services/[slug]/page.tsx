@@ -102,6 +102,9 @@ export default async function ServiceDetailPage({
             <Reveal>
               <p className="eyebrow mb-3">Related Services</p>
               <h2 className="text-display-md text-3xl">Explore related capabilities</h2>
+              <p className="mt-4 max-w-xl text-taupe">
+                Most engagements draw on more than one capability. These are commonly paired with this service to compound results.
+              </p>
             </Reveal>
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((s, i) => (
