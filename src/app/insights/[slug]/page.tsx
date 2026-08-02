@@ -5,8 +5,8 @@ import Script from "next/script";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { CtaBand } from "@/components/ui/CtaBand";
-import { ArrowRight } from "@/components/ui/Icons";
-import { insights, getInsight } from "@/data/content";
+import { ArrowRight, ArrowUpRight } from "@/components/ui/Icons";
+import { insights, getInsight, getRelatedInsights } from "@/data/content";
 import { articleSchema, jsonLd } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -22,10 +22,10 @@ export async function generateMetadata({
   const post = getInsight(slug);
   if (!post) return { title: "Insight not found" };
   return {
-    title: post.title,
+    title: post.metaTitle ?? post.title,
     description: post.excerpt,
     alternates: { canonical: `/insights/${post.slug}` },
-    openGraph: { type: "article", title: post.title, description: post.excerpt },
+    openGraph: { type: "article", title: post.metaTitle ?? post.title, description: post.excerpt },
   };
 }
 
@@ -37,6 +37,8 @@ export default async function InsightDetailPage({
   const { slug } = await params;
   const post = getInsight(slug);
   if (!post) notFound();
+
+  const related = getRelatedInsights(slug);
 
   return (
     <>
@@ -98,6 +100,38 @@ export default async function InsightDetailPage({
           </Reveal>
         </Container>
       </article>
+
+      {related.length > 0 && (
+        <section className="border-t border-line py-16 lg:py-20">
+          <Container>
+            <Reveal>
+              <p className="eyebrow mb-3">Related Insights</p>
+              <h2 className="text-display-md text-3xl">Keep reading</h2>
+            </Reveal>
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {related.map((p, i) => (
+                <Reveal as="article" key={p.slug} delay={i * 0.05}>
+                  <Link
+                    href={`/insights/${p.slug}`}
+                    className="group flex h-full flex-col rounded-2xl border border-line bg-cream p-8 transition-all duration-300 ease-smooth hover:border-gold/40 hover:shadow-[0_18px_50px_-30px_rgba(20,17,12,0.35)]"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="eyebrow">{p.category}</span>
+                      <span className="text-xs text-taupe-light">{p.readMinutes} min</span>
+                    </div>
+                    <h3 className="mt-5 text-xl leading-snug text-ink">{p.title}</h3>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-taupe">{p.excerpt}</p>
+                    <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-gold">
+                      Read insight
+                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </span>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
 
       <CtaBand />
     </>

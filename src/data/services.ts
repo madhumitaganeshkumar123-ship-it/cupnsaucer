@@ -445,6 +445,18 @@ export function getService(slug: string) {
   return services.find((s) => s.slug === slug);
 }
 
+export function getRelatedServices(slug: string, count = 3) {
+  const current = getService(slug);
+  if (!current) return [];
+  const sameCategory = services.filter(
+    (s) => s.slug !== slug && s.category === current.category,
+  );
+  const rest = services.filter(
+    (s) => s.slug !== slug && s.category !== current.category,
+  );
+  return [...sameCategory, ...rest].slice(0, count);
+}
+
 export const serviceCategories = Array.from(
   new Set(services.map((s) => s.category)),
 );

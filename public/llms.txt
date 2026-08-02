@@ -1,0 +1,62 @@
+# Cup N Saucer
+
+> Cup N Saucer is a business growth consultancy based in Madurai, Tamil Nadu, India, helping companies build strategy, sales systems, marketing, operations, and organizational capability to turn vision into sustainable, structured growth.
+
+Cup N Saucer works with founders and leadership teams on business strategy, sales and distribution excellence, organizational development, marketing and customer growth, operational systems, and AI & digital transformation. Engagements are practical and outcome-driven rather than theoretical.
+
+## Company
+
+- [About](https://www.cupnsaucer.co.in/about): Who Cup N Saucer is and how the consultancy works with clients.
+- [Contact](https://www.cupnsaucer.co.in/contact): Ways to get in touch.
+- [Book a Strategy Call](https://www.cupnsaucer.co.in/book-consultation): Schedule an initial consultation.
+- [FAQ](https://www.cupnsaucer.co.in/faq): Common questions about engagements, pricing approach, and process.
+- [Industries](https://www.cupnsaucer.co.in/industries): Industries and sectors served.
+
+## Services
+
+- [Services overview](https://www.cupnsaucer.co.in/services): Full catalogue of consulting services.
+- [Business Strategy Development](https://www.cupnsaucer.co.in/services/business-strategy-development)
+- [Growth Planning](https://www.cupnsaucer.co.in/services/growth-planning)
+- [Market Expansion Strategy](https://www.cupnsaucer.co.in/services/market-expansion-strategy)
+- [Go-To-Market Planning](https://www.cupnsaucer.co.in/services/go-to-market-planning)
+- [Sales Process Design](https://www.cupnsaucer.co.in/services/sales-process-design)
+- [Distribution Expansion](https://www.cupnsaucer.co.in/services/distribution-expansion)
+- [Territory Optimization](https://www.cupnsaucer.co.in/services/territory-optimization)
+- [Sales Training](https://www.cupnsaucer.co.in/services/sales-training)
+- [Performance Management Systems](https://www.cupnsaucer.co.in/services/performance-management-systems)
+- [Marketing Strategy](https://www.cupnsaucer.co.in/services/marketing-strategy)
+- [Brand Positioning](https://www.cupnsaucer.co.in/services/brand-positioning)
+- [Digital Marketing Advisory](https://www.cupnsaucer.co.in/services/digital-marketing-advisory)
+- [Customer Experience Design](https://www.cupnsaucer.co.in/services/customer-experience-design)
+- [Process Optimization](https://www.cupnsaucer.co.in/services/process-optimization)
+- [SOP Development](https://www.cupnsaucer.co.in/services/sop-development)
+- [AI Readiness Assessment](https://www.cupnsaucer.co.in/services/ai-readiness-assessment)
+- [Digital Transformation](https://www.cupnsaucer.co.in/services/digital-transformation)
+
+## Case Studies
+
+- [Case Studies overview](https://www.cupnsaucer.co.in/case-studies)
+- [Professionalizing for the next generation](https://www.cupnsaucer.co.in/case-studies/family-business-transformation): A family business builds structure for succession.
+- [Tripling distribution reach without channel conflict](https://www.cupnsaucer.co.in/case-studies/manufacturing-distribution-expansion): A manufacturer expands distribution.
+- [From founder-led selling to a predictable engine](https://www.cupnsaucer.co.in/case-studies/sme-sales-process): An SME builds a repeatable sales process.
+
+## Insights
+
+- [Insights overview](https://www.cupnsaucer.co.in/insights)
+- [Growth is a system, not a sprint](https://www.cupnsaucer.co.in/insights/growth-is-a-system-not-a-sprint)
+- [If your sales process lives in someone's head, it isn't a process](https://www.cupnsaucer.co.in/insights/your-sales-process-lives-in-someones-head)
+- [Distribution is strategy, not an afterthought](https://www.cupnsaucer.co.in/insights/distribution-is-strategy)
+- [AI readiness should come before AI ambition](https://www.cupnsaucer.co.in/insights/ai-readiness-before-ai-ambition)
+- [Positioning beats promotion](https://www.cupnsaucer.co.in/insights/positioning-beats-promotion)
+- [The operations that got you here won't scale you there](https://www.cupnsaucer.co.in/insights/operations-that-scale)
+
+## Resources
+
+- [Resources overview](https://www.cupnsaucer.co.in/resources): Downloadable guides and templates.
+
+## Optional
+
+- [Privacy Policy](https://www.cupnsaucer.co.in/legal/privacy-policy)
+- [Terms & Conditions](https://www.cupnsaucer.co.in/legal/terms)
+- [Cookie Policy](https://www.cupnsaucer.co.in/legal/cookie-policy)
+- [Disclaimer](https://www.cupnsaucer.co.in/legal/disclaimer)

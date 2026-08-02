@@ -276,6 +276,7 @@ export type Insight = {
   slug: string;
   category: string;
   title: string;
+  metaTitle?: string;
   excerpt: string;
   readMinutes: number;
   date: string;
@@ -312,6 +313,7 @@ export const insights: Insight[] = [
     slug: "your-sales-process-lives-in-someones-head",
     category: "Sales",
     title: "If your sales process lives in someone's head, it isn't a process",
+    metaTitle: "Undocumented Sales Processes Cap Your Growth",
     excerpt:
       "Undocumented selling caps your growth at the bandwidth of your best people. Make it a system.",
     readMinutes: 5,
@@ -382,4 +384,16 @@ export const insights: Insight[] = [
 
 export function getInsight(slug: string) {
   return insights.find((i) => i.slug === slug);
+}
+
+export function getRelatedInsights(slug: string, count = 3) {
+  const current = getInsight(slug);
+  if (!current) return [];
+  const sameCategory = insights.filter(
+    (i) => i.slug !== slug && i.category === current.category,
+  );
+  const rest = insights.filter(
+    (i) => i.slug !== slug && i.category !== current.category,
+  );
+  return [...sameCategory, ...rest].slice(0, count);
 }

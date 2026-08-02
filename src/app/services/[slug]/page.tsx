@@ -6,8 +6,8 @@ import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { CtaBand } from "@/components/ui/CtaBand";
-import { Check, ArrowRight } from "@/components/ui/Icons";
-import { services, getService } from "@/data/services";
+import { Check, ArrowRight, ArrowUpRight } from "@/components/ui/Icons";
+import { services, getService, getRelatedServices } from "@/data/services";
 import { serviceSchema, jsonLd } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -39,6 +39,7 @@ export default async function ServiceDetailPage({
   if (!service) notFound();
 
   const path = `/services/${service.slug}`;
+  const related = getRelatedServices(slug);
 
   return (
     <>
@@ -94,6 +95,33 @@ export default async function ServiceDetailPage({
           </Reveal>
         </Container>
       </section>
+
+      {related.length > 0 && (
+        <section className="border-t border-line py-16 lg:py-20">
+          <Container>
+            <Reveal>
+              <p className="eyebrow mb-3">Related Services</p>
+              <h2 className="text-display-md text-3xl">Explore related capabilities</h2>
+            </Reveal>
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {related.map((s, i) => (
+                <Reveal as="article" key={s.slug} delay={i * 0.04}>
+                  <Link
+                    href={`/services/${s.slug}`}
+                    className="group flex h-full flex-col justify-between rounded-2xl border border-line bg-cream p-7 transition-all duration-300 ease-smooth hover:border-gold/40 hover:shadow-[0_18px_50px_-30px_rgba(20,17,12,0.35)]"
+                  >
+                    <div>
+                      <h3 className="text-lg text-ink">{s.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-taupe">{s.summary}</p>
+                    </div>
+                    <ArrowUpRight className="mt-6 h-5 w-5 text-gold transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
 
       <CtaBand />
     </>
