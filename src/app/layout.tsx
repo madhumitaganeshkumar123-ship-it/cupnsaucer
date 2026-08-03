@@ -66,6 +66,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-E5LL31X53L"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-E5LL31X53L');
+          `}
+        </Script>
         <Script id="org-schema" type="application/ld+json" dangerouslySetInnerHTML={jsonLd(organizationSchema())} />
         <a
           href="#main"
