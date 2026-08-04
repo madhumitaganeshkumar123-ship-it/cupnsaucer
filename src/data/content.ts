@@ -281,6 +281,8 @@ export type Insight = {
   readMinutes: number;
   date: string;
   body: string[];
+  image?: string;
+  scrollReveal?: boolean;
 };
 
 export const insightCategories = [
@@ -295,6 +297,22 @@ export const insightCategories = [
 ];
 
 export const insights: Insight[] = [
+  {
+    slug: "chennai-isnt-a-bigger-madurai",
+    category: "Business Growth",
+    title: "Chennai isn't a bigger Madurai",
+    excerpt:
+      "Chennai isn't a bigger Madurai \u2014 it's a different market, with different buyers and different competition. Treat it that way.",
+    readMinutes: 4,
+    date: "2026-08-04",
+    body: [
+      "Chennai is often called the Detroit of Asia. It produces well over a third of India's automobiles, anchors one of the country's largest IT and BPO industries, and has become a leading hub for electronics and EV manufacturing. For a business that has proven itself in a market like Madurai, Chennai looks like the obvious next step: bigger population, bigger budgets, bigger opportunity.",
+      "But bigger isn't just more of the same. Chennai's buyers are used to dealing with larger, more process-driven vendors, and the competitive set already includes players with city-wide brand recognition. What builds trust in a tighter-knit market \u2014 relationships, reputation, word of mouth \u2014 carries far less weight when you're one of hundreds of similar businesses a buyer has never heard of.",
+      "The businesses that expand successfully treat the new city as a distinct market, not a bigger version of the old one: a positioning that explains why a Chennai buyer should choose an unfamiliar name over an established local option, a go-to-market plan built for a market where nobody already knows you, and enough operational discipline to deliver consistently once the first few deals land. Expansion doesn't create strengths and gaps that weren't already there \u2014 it just multiplies whichever ones exist.",
+    ],
+    image: "/images/insights/chennai-isnt-a-bigger-madurai.jpg",
+    scrollReveal: true,
+  },
   {
     slug: "growth-is-a-system-not-a-sprint",
     category: "Business Growth",
