@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
@@ -43,8 +44,20 @@ export default function InsightsPage() {
             <Reveal as="article" key={post.slug} delay={i * 0.05}>
               <Link
                 href={`/insights/${post.slug}`}
-                className="group flex h-full flex-col rounded-2xl border border-line bg-cream p-8 transition-all duration-300 ease-smooth hover:border-gold/40 hover:shadow-[0_18px_50px_-30px_rgba(20,17,12,0.35)]"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-cream transition-all duration-300 ease-smooth hover:border-gold/40 hover:shadow-[0_18px_50px_-30px_rgba(20,17,12,0.35)]"
               >
+                {post.image && (
+                  <div className="relative aspect-[16/10] w-full overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-500 ease-smooth group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <div className="flex h-full flex-col p-8">
                 <div className="flex items-center justify-between">
                   <span className="eyebrow">{post.category}</span>
                   <span className="text-xs text-taupe-light">{post.readMinutes} min</span>
@@ -55,6 +68,7 @@ export default function InsightsPage() {
                   Read insight
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
+                </div>
               </Link>
             </Reveal>
           ))}
