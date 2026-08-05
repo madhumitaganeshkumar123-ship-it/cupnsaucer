@@ -39,7 +39,7 @@ export default function InsightsPage() {
       </section>
 
       <section className="pb-24 lg:pb-32">
-        <Container className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <Container className="grid items-start gap-6 md:grid-cols-2 lg:grid-cols-3">
           {insights.map((post, i) => (
             <Reveal as="article" key={post.slug} delay={i * 0.05}>
               <Link
@@ -47,7 +47,7 @@ export default function InsightsPage() {
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-cream transition-all duration-300 ease-smooth hover:border-gold/40 hover:shadow-[0_18px_50px_-30px_rgba(20,17,12,0.35)]"
               >
                 {post.image && (
-                  <div className="relative aspect-[16/10] w-full overflow-hidden">
+                  <div className="relative aspect-[3/2] w-full overflow-hidden">
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -63,7 +63,7 @@ export default function InsightsPage() {
                   <span className="text-xs text-taupe-light">{post.readMinutes} min</span>
                 </div>
                 <h2 className="mt-5 text-xl leading-snug text-ink">{post.title}</h2>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-taupe">{post.excerpt}</p>
+                <p className="mt-3 text-sm leading-relaxed text-taupe">{post.excerpt}</p>
                 <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-gold">
                   Read insight
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
