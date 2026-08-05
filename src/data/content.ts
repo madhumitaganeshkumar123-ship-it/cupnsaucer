@@ -326,6 +326,8 @@ export const insights: Insight[] = [
       "A growth system has three parts. First, a clear thesis about where value comes from. Second, a small set of levers the team actually controls. Third, an operating cadence that turns the thesis into weekly action and learning.",
       "The work isn't glamorous. It's choosing fewer priorities, defining who owns each lever, and reviewing progress often enough to course-correct. But that discipline is exactly what turns a good quarter into a good decade.",
     ],
+    image: "/images/insights/growth-is-a-system-not-a-sprint.jpg",
+    scrollReveal: true,
   },
   {
     slug: "your-sales-process-lives-in-someones-head",
