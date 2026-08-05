@@ -341,6 +341,8 @@ export const insights: Insight[] = [
       "A real process makes the implicit explicit. It names the stages a buyer moves through, defines what has to be true to advance, and equips the team with the tools to do it consistently. That's what makes performance coachable.",
       "You don't lose the art of selling by writing it down. You give more people the chance to be good at it — and you give yourself a pipeline you can actually trust.",
     ],
+    image: "/images/insights/your-sales-process-lives-in-someones-head.jpg",
+    scrollReveal: true,
   },
   {
     slug: "distribution-is-strategy",
