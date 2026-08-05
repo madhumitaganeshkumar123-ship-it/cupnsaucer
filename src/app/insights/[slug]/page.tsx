@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { ArrowRight, ArrowUpRight } from "@/components/ui/Icons";
 import { insights, getInsight, getRelatedInsights } from "@/data/content";
@@ -25,7 +27,12 @@ export async function generateMetadata({
     title: post.metaTitle ?? post.title,
     description: post.excerpt,
     alternates: { canonical: `/insights/${post.slug}` },
-    openGraph: { type: "article", title: post.metaTitle ?? post.title, description: post.excerpt },
+    openGraph: {
+      type: "article",
+      title: post.metaTitle ?? post.title,
+      description: post.excerpt,
+      ...(post.image ? { images: [{ url: post.image, width: 1536, height: 1024 }] } : {}),
+    },
   };
 }
 
@@ -69,23 +76,57 @@ export default async function InsightDetailPage({
             <h1 className="mt-4 text-display-lg">{post.title}</h1>
           </Reveal>
 
-          <Reveal delay={0.05} className="mt-10">
-            <div className="saucer-rule" />
-            <div className="mt-10 space-y-6">
-              {post.body.map((para, i) => (
-                <p
-                  key={i}
-                  className={
-                    i === 0
-                      ? "text-xl leading-relaxed text-ink"
-                      : "text-lg leading-relaxed text-taupe"
-                  }
-                >
-                  {para}
-                </p>
-              ))}
-            </div>
-          </Reveal>
+          {post.image && (
+            <Reveal delay={0.03} className="mt-10">
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 768px, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+          )}
+
+          {post.scrollReveal ? (
+            <ScrollReveal className="mt-10">
+              <div className="space-y-6">
+                {post.body.map((para, i) => (
+                  <p
+                    key={i}
+                    className={
+                      i === 0
+                        ? "text-xl leading-relaxed text-ink"
+                        : "text-lg leading-relaxed text-taupe"
+                    }
+                  >
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </ScrollReveal>
+          ) : (
+            <Reveal delay={0.05} className="mt-10">
+              <div className="saucer-rule" />
+              <div className="mt-10 space-y-6">
+                {post.body.map((para, i) => (
+                  <p
+                    key={i}
+                    className={
+                      i === 0
+                        ? "text-xl leading-relaxed text-ink"
+                        : "text-lg leading-relaxed text-taupe"
+                    }
+                  >
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </Reveal>
+          )}
 
           <Reveal className="mt-12 rounded-2xl border border-gold/20 bg-cream-deep/40 p-8">
             <p className="font-display text-xl text-ink">
