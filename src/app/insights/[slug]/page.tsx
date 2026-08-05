@@ -78,7 +78,7 @@ export default async function InsightDetailPage({
 
           {post.image && (
             <Reveal delay={0.03} className="mt-10">
-              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl">
                 <Image
                   src={post.image}
                   alt={post.title}
