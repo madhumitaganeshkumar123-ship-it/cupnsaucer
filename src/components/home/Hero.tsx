@@ -1,32 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { AnimatedLogoMark } from "@/components/home/AnimatedLogoMark";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight } from "@/components/ui/Icons";
 
 const ease = [0.22, 1, 0.36, 1] as const;
-
-// Signature element: the real brand mark, fading and settling into place.
-function AnimatedMark() {
-  return (
-    <motion.div
-      className="relative h-full w-full"
-      initial={{ opacity: 0, scale: 0.92, y: 16 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ duration: 1, ease, delay: 0.2 }}
-    >
-      <Image
-        src="/images/logo-mark.png"
-        alt="Cup N Saucer"
-        fill
-        className="object-contain"
-        priority
-      />
-    </motion.div>
-  );
-}
 
 export function Hero() {
   return (
@@ -96,7 +76,7 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto hidden aspect-square w-full lg:block lg:max-w-none lg:translate-x-10 xl:translate-x-16">
-          <AnimatedMark />
+          <AnimatedLogoMark />
         </div>
       </Container>
     </section>
