@@ -5,7 +5,6 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ContactForm } from "@/components/forms/ContactForm";
 import {
   MailIcon,
-  PhoneIcon,
   WhatsAppIcon,
   LinkedInIcon,
   PinIcon,
@@ -15,7 +14,7 @@ import { site, whatsappLink } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Cup N Saucer, the best marketing consultancy in Madurai. Reach us by message, WhatsApp, email, or phone.",
+    "Get in touch with Cup N Saucer, the best marketing consultancy in Madurai. Reach us by message, WhatsApp, or email.",
   alternates: { canonical: "/contact" },
 };
 
@@ -60,19 +59,6 @@ export default function ContactPage() {
               <span>
                 <span className="block text-xs uppercase tracking-eyebrow text-taupe">Email</span>
                 <span className="text-ink">{site.email}</span>
-              </span>
-            </a>
-
-            <a
-              href={`tel:${site.phoneHref}`}
-              className="group flex items-center gap-4 rounded-2xl border border-line bg-cream p-6 transition-colors hover:border-gold/40"
-            >
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold">
-                <PhoneIcon className="h-6 w-6" />
-              </span>
-              <span>
-                <span className="block text-xs uppercase tracking-eyebrow text-taupe">Phone</span>
-                <span className="text-ink">{site.phone}</span>
               </span>
             </a>
 
