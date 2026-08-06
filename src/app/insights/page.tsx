@@ -8,7 +8,7 @@ import { ArrowUpRight } from "@/components/ui/Icons";
 import { insights, insightCategories } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Insights",
+  title: "Business Growth Blog for Founders & SMEs",
   description:
     "Business growth insights from Cup N Saucer — on strategy, sales, distribution, marketing, branding, leadership, AI, and operations.",
   alternates: { canonical: "/insights" },
@@ -18,7 +18,7 @@ export default function InsightsPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Insights"
+        eyebrow="Blog"
         title="Ideas worth building on"
         intro="Practical thinking on growth, sales, distribution, marketing, leadership, AI, and operations — for leaders who want substance over buzzwords."
       />
