@@ -4,7 +4,7 @@ export const mainNav: NavItem[] = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
-  { label: "Insights", href: "/insights" },
+  { label: "Blog", href: "/insights" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Resources", href: "/resources" },
   { label: "FAQ", href: "/faq" },
@@ -15,7 +15,7 @@ export const footerNav = {
   Company: [
     { label: "About", href: "/about" },
     { label: "Case Studies", href: "/case-studies" },
-    { label: "Insights", href: "/insights" },
+    { label: "Blog", href: "/insights" },
     { label: "Contact", href: "/contact" },
   ],
   Services: [
@@ -26,7 +26,7 @@ export const footerNav = {
   ],
   Resources: [
     { label: "Resource Library", href: "/resources" },
-    { label: "Business Growth Insights", href: "/insights" },
+    { label: "Business Growth Blog", href: "/insights" },
     { label: "FAQ", href: "/faq" },
     { label: "Book a Strategy Call", href: "/book-consultation" },
   ],
