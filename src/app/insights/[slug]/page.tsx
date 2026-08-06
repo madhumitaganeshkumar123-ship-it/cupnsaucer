@@ -67,7 +67,7 @@ export default async function InsightDetailPage({
         <Container className="max-w-3xl">
           <Reveal>
             <Link href="/insights" className="link-underline text-sm text-gold">
-              ← All insights
+              ← All articles
             </Link>
             <div className="mt-8 flex items-center gap-3 text-xs">
               <span className="eyebrow">{post.category}</span>
@@ -146,7 +146,7 @@ export default async function InsightDetailPage({
         <section className="border-t border-line py-16 lg:py-20">
           <Container>
             <Reveal>
-              <p className="eyebrow mb-3">Related Insights</p>
+              <p className="eyebrow mb-3">Related Articles</p>
               <h2 className="text-display-md text-3xl">Keep reading</h2>
             </Reveal>
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
