@@ -137,6 +137,21 @@ export function AnimatedLogoMark() {
               <stop offset="100%" stopColor="#6E5326" />
             </linearGradient>
 
+            {/* narrow column bevel for the bars: light left edge, dark right edge,
+                same local width (-32 to 0) on every bar so it re-applies per bar */}
+            <linearGradient
+              id="barFace"
+              gradientUnits="userSpaceOnUse"
+              x1="-32"
+              y1="0"
+              x2="0"
+              y2="0"
+            >
+              <stop offset="0%" stopColor="#F0D9A6" />
+              <stop offset="40%" stopColor="#C7A25E" />
+              <stop offset="100%" stopColor="#7A5F35" />
+            </linearGradient>
+
             {/* soft inner shadow, clipped to each shape, for a pressed/embossed edge */}
             <clipPath id="cupClip">
               <path d={CUP.d} transform={`translate(${CUP.tx},${CUP.ty})`} />
@@ -208,8 +223,8 @@ export function AnimatedLogoMark() {
                 <g key={i} transform={`translate(${bar.tx},${bar.ty})`}>
                   <motion.path
                     d={bar.d}
-                    fill="url(#vapour)"
-                    style={{ transformOrigin: `50% ${bar.base}px` }}
+                    fill="url(#barFace)"
+                    style={{ originX: 0.5, originY: 1 }}
                     initial={{ scaleY: 0, opacity: 0 }}
                     animate={{
                       scaleY: [0, 1, 1.03, 1],
