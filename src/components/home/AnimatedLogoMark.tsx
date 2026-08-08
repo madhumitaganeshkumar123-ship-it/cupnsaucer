@@ -102,6 +102,10 @@ export function AnimatedLogoMark() {
           aria-label="Cup N Saucer"
           animate={reduce ? undefined : { y: [0, -8, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          style={{
+            filter:
+              "drop-shadow(0 22px 30px rgba(79,58,20,0.28)) drop-shadow(0 6px 8px rgba(79,58,20,0.22))",
+          }}
         >
           <defs>
             {/* vapour tint: bars stay solid at the base, lift toward the top */}
@@ -117,14 +121,80 @@ export function AnimatedLogoMark() {
               <stop offset="62%" stopColor={GOLD} stopOpacity="0.92" />
               <stop offset="100%" stopColor={GOLD} stopOpacity="0.6" />
             </linearGradient>
+
+            {/* metallic bevel: light catches the top-left edge, shadow pools bottom-right */}
+            <linearGradient
+              id="bevel"
+              gradientUnits="userSpaceOnUse"
+              x1="130"
+              y1="120"
+              x2="470"
+              y2="480"
+            >
+              <stop offset="0%" stopColor="#E7C989" />
+              <stop offset="18%" stopColor="#C7A25E" />
+              <stop offset="55%" stopColor={GOLD} />
+              <stop offset="100%" stopColor="#6E5326" />
+            </linearGradient>
+
+            {/* soft inner shadow, clipped to each shape, for a pressed/embossed edge */}
+            <clipPath id="cupClip">
+              <path d={CUP.d} transform={`translate(${CUP.tx},${CUP.ty})`} />
+            </clipPath>
+            <clipPath id="handleClip">
+              <path d={HANDLE.d} transform={`translate(${HANDLE.tx},${HANDLE.ty})`} />
+            </clipPath>
           </defs>
 
           {/* cup + handle: the anchor, never animated away */}
           <g transform={`translate(${CUP.tx},${CUP.ty})`}>
-            <path d={CUP.d} fill={GOLD} />
+            <path d={CUP.d} fill="url(#bevel)" />
           </g>
+          <g clipPath="url(#cupClip)">
+            <ellipse
+              cx="230"
+              cy="230"
+              rx="230"
+              ry="200"
+              fill="#000"
+              opacity="0.16"
+              transform="translate(60,90)"
+              style={{ filter: "blur(30px)" }}
+            />
+            <ellipse
+              cx="60"
+              cy="40"
+              rx="140"
+              ry="90"
+              fill="#FFF3D8"
+              opacity="0.35"
+              transform="translate(110,110)"
+              style={{ filter: "blur(26px)" }}
+            />
+          </g>
+
           <g transform={`translate(${HANDLE.tx},${HANDLE.ty})`}>
-            <path d={HANDLE.d} fill={GOLD} />
+            <path d={HANDLE.d} fill="url(#bevel)" />
+          </g>
+          <g clipPath="url(#handleClip)">
+            <ellipse
+              cx="598"
+              cy="340"
+              rx="55"
+              ry="60"
+              fill="#000"
+              opacity="0.18"
+              style={{ filter: "blur(14px)" }}
+            />
+            <ellipse
+              cx="530"
+              cy="270"
+              rx="40"
+              ry="30"
+              fill="#FFF3D8"
+              opacity="0.4"
+              style={{ filter: "blur(10px)" }}
+            />
           </g>
 
           {/* the three bars, rising like steam */}
