@@ -62,6 +62,14 @@ export const AiIcon = wrap(
   </>,
 );
 
+export const BrandingIcon = wrap(
+  <>
+    <path d="M4 20l3.2-1 8.4-8.4a1.6 1.6 0 0 0-2.2-2.2L4.9 16.9 4 20z" />
+    <path d="M13.5 7.5l3 3" />
+    <path d="M4 20l1-3.2" />
+  </>,
+);
+
 export const iconMap = {
   strategy: StrategyIcon,
   sales: SalesIcon,
@@ -69,6 +77,7 @@ export const iconMap = {
   marketing: MarketingIcon,
   operations: OperationsIcon,
   ai: AiIcon,
+  branding: BrandingIcon,
 } as const;
 
 // Utility / UI icons
