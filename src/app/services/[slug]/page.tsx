@@ -7,8 +7,9 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { Check, ArrowRight, ArrowUpRight } from "@/components/ui/Icons";
+import { Accordion } from "@/components/ui/Accordion";
 import { services, getService, getRelatedServices } from "@/data/services";
-import { serviceSchema, jsonLd } from "@/lib/schema";
+import { serviceSchema, faqSchema, jsonLd } from "@/lib/schema";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -23,8 +24,8 @@ export async function generateMetadata({
   const service = getService(slug);
   if (!service) return { title: "Service not found" };
   return {
-    title: service.title,
-    description: service.summary,
+    title: service.metaTitle ?? service.title,
+    description: service.metaDescription ?? service.summary,
     alternates: { canonical: `/services/${service.slug}` },
   };
 }
@@ -48,6 +49,13 @@ export default async function ServiceDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={jsonLd(serviceSchema(service.title, service.summary, path))}
       />
+      {service.faqs && service.faqs.length > 0 && (
+        <Script
+          id={`service-faq-schema-${service.slug}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLd(faqSchema(service.faqs))}
+        />
+      )}
       <PageHeader eyebrow={service.category} title={service.title} intro={service.summary} />
 
       <section className="py-20 lg:py-28">
@@ -121,6 +129,20 @@ export default async function ServiceDetailPage({
                   </Link>
                 </Reveal>
               ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {service.faqs && service.faqs.length > 0 && (
+        <section className="border-t border-line py-16 lg:py-20">
+          <Container className="max-w-3xl">
+            <Reveal>
+              <p className="eyebrow mb-3">FAQ</p>
+              <h2 className="text-display-md text-3xl">Common questions</h2>
+            </Reveal>
+            <div className="mt-10">
+              <Accordion items={service.faqs} />
             </div>
           </Container>
         </section>
