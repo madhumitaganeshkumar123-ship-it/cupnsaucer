@@ -11,7 +11,7 @@ export function Services() {
       <Container>
         <SectionHeading
           eyebrow="What We Do"
-          title="Six pillars of sustainable growth"
+          title="Seven pillars of sustainable growth"
           intro="Strategy, systems, people, processes, and performance — the full set of capabilities a business needs to scale with confidence."
         />
 
