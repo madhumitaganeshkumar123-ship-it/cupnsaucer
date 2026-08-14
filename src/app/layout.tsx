@@ -38,7 +38,12 @@ export const metadata: Metadata = {
     "distribution strategy",
     "operational excellence",
     "digital transformation",
+    "digital marketing agency Madurai",
+    "digital marketing agency Chennai",
+    "branding agency Madurai",
+    "advertising agency Madurai",
     "Madurai",
+    "Chennai",
     "Tamil Nadu",
   ],
   openGraph: {
