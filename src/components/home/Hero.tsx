@@ -10,7 +10,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 lg:pt-44 lg:pb-28">
+    <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 lg:flex lg:min-h-screen lg:items-center lg:pt-44 lg:pb-28">
       {/* ambient warm wash */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -right-32 -top-24 h-[36rem] w-[36rem] rounded-full bg-gold/5 blur-3xl" />
@@ -80,7 +80,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <div className="relative mx-auto hidden aspect-square w-full lg:block lg:max-w-none lg:translate-x-10 xl:translate-x-16">
+        <div className="relative mx-auto hidden aspect-square w-full lg:block lg:max-w-none lg:translate-x-10 lg:scale-150 xl:translate-x-16">
           <AnimatedLogoMark />
         </div>
       </Container>
