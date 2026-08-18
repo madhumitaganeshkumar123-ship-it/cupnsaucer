@@ -17,6 +17,28 @@ export function Hero() {
         <div className="absolute -left-24 bottom-0 h-96 w-96 rounded-full bg-gold/[0.04] blur-3xl" />
       </div>
 
+      {/* faint growth-line pattern, echoing the rising bars in the mark */}
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full opacity-[0.05]"
+      >
+        <defs>
+          <pattern
+            id="heroGrowthLines"
+            width="140"
+            height="140"
+            patternUnits="userSpaceOnUse"
+            patternTransform="rotate(-10)"
+          >
+            <line x1="14" y1="132" x2="14" y2="96" stroke="#A6792E" strokeWidth="4" strokeLinecap="round" />
+            <line x1="38" y1="132" x2="38" y2="72" stroke="#A6792E" strokeWidth="4" strokeLinecap="round" />
+            <line x1="62" y1="132" x2="62" y2="40" stroke="#A6792E" strokeWidth="4" strokeLinecap="round" />
+            <line x1="86" y1="132" x2="86" y2="16" stroke="#A6792E" strokeWidth="4" strokeLinecap="round" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#heroGrowthLines)" />
+      </svg>
+
       <Container className="grid items-center gap-12 lg:grid-cols-[1.5fr_0.5fr]">
         <div>
           <motion.p
