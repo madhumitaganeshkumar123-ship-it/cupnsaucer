@@ -17,7 +17,7 @@ export function Hero() {
         <div className="absolute -left-24 bottom-0 h-96 w-96 rounded-full bg-gold/[0.04] blur-3xl" />
       </div>
 
-      <Container className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+      <Container className="grid items-center gap-12 lg:grid-cols-[1.5fr_0.5fr]">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -28,7 +28,7 @@ export function Hero() {
             Business Growth Consultancy
           </motion.p>
 
-          <h1 className="font-bold leading-[1.06] tracking-[-0.01em] text-[clamp(1.875rem,3.2vw,2.5625rem)]">
+          <h1 className="font-bold leading-[1.05] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]">
             {["Business Solutions Today,", "Business Development for Tomorrow."].map(
               (line, i) => (
                 <span key={line} className="block overflow-hidden">
