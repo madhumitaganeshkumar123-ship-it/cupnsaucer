@@ -29,24 +29,30 @@ export function Hero() {
           </motion.p>
 
           <h1 className="text-display-xl">
-            {["Where Vision", "Meets Structure"].map((line, i) => (
-              <span key={line} className="block overflow-hidden">
-                <motion.span
-                  className="block"
-                  initial={{ y: "110%" }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 0.9, ease, delay: 0.1 + i * 0.12 }}
-                >
-                  {i === 1 ? (
-                    <>
-                      Meets <span className="italic text-gold">Structure</span>
-                    </>
-                  ) : (
-                    line
-                  )}
-                </motion.span>
-              </span>
-            ))}
+            {["Business Solutions Today.", "Business Development for Tomorrow."].map(
+              (line, i) => (
+                <span key={line} className="block overflow-hidden">
+                  <motion.span
+                    className="block"
+                    initial={{ y: "110%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.9, ease, delay: 0.1 + i * 0.12 }}
+                  >
+                    {i === 1 ? (
+                      <>
+                        Business Development for{" "}
+                        <span className="italic text-gold">Tomorrow.</span>
+                      </>
+                    ) : (
+                      <>
+                        Business Solutions{" "}
+                        <span className="italic text-gold">Today.</span>
+                      </>
+                    )}
+                  </motion.span>
+                </span>
+              ),
+            )}
           </h1>
 
           <motion.p
@@ -55,9 +61,18 @@ export function Hero() {
             transition={{ duration: 0.7, ease, delay: 0.5 }}
             className="mt-7 max-w-xl text-base leading-relaxed text-taupe sm:text-lg"
           >
-            We help businesses transform ideas into sustainable growth through
-            strategy, sales excellence, marketing, operational systems,
-            organizational development, and digital transformation.
+            Strategy, sales, marketing, operations, and people — under one
+            roof, built for founders who think past the next quarter.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease, delay: 0.58 }}
+            className="mt-3 max-w-xl text-sm text-taupe-light"
+          >
+            Serving businesses in Madurai, Chennai, and other cities — across
+            Tamil Nadu and beyond.
           </motion.p>
 
           <motion.div
