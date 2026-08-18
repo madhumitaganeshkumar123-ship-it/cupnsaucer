@@ -28,8 +28,8 @@ export function Hero() {
             Business Growth Consultancy
           </motion.p>
 
-          <h1 className="text-display-xl">
-            {["Business Solutions Today.", "Business Development for Tomorrow."].map(
+          <h1 className="leading-[1.08] tracking-[-0.01em] text-[clamp(1.5rem,2.3vw,2.5rem)]">
+            {["Business Solutions Today,", "Business Development for Tomorrow."].map(
               (line, i) => (
                 <span key={line} className="block overflow-hidden">
                   <motion.span
@@ -46,7 +46,7 @@ export function Hero() {
                     ) : (
                       <>
                         Business Solutions{" "}
-                        <span className="italic text-gold">Today.</span>
+                        <span className="italic text-gold">Today,</span>
                       </>
                     )}
                   </motion.span>
@@ -60,16 +60,6 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease, delay: 0.5 }}
             className="mt-7 max-w-xl text-base leading-relaxed text-taupe sm:text-lg"
-          >
-            Strategy, sales, marketing, operations, and people — under one
-            roof, built for founders who think past the next quarter.
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.58 }}
-            className="mt-3 max-w-xl text-sm text-taupe-light"
           >
             Serving businesses in Madurai, Chennai, and other cities — across
             Tamil Nadu and beyond.
