@@ -43,11 +43,10 @@ export async function generateMetadata({
 // existing shorter post while letting longer, more structured insights
 // have real section headings.
 function renderBody(body: string[]) {
-  let leadUsed = false;
   return body.map((raw, i) => {
     if (raw.startsWith("### ")) {
       return (
-        <h3 key={i} className="mt-2 text-xl leading-snug text-ink">
+        <h3 key={i} className="mt-2 font-display text-xl leading-snug text-ink">
           {raw.slice(4)}
         </h3>
       );
@@ -59,17 +58,8 @@ function renderBody(body: string[]) {
         </h2>
       );
     }
-    const isLead = !leadUsed;
-    leadUsed = true;
     return (
-      <p
-        key={i}
-        className={
-          isLead
-            ? "text-xl leading-relaxed text-ink"
-            : "text-lg leading-relaxed text-taupe"
-        }
-      >
+      <p key={i} className="text-lg leading-relaxed text-taupe">
         {raw}
       </p>
     );
