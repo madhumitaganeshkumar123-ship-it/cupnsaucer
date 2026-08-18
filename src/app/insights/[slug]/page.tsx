@@ -7,9 +7,10 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { CtaBand } from "@/components/ui/CtaBand";
+import { Accordion } from "@/components/ui/Accordion";
 import { ArrowRight, ArrowUpRight } from "@/components/ui/Icons";
 import { insights, getInsight, getRelatedInsights } from "@/data/content";
-import { articleSchema, jsonLd } from "@/lib/schema";
+import { articleSchema, faqSchema, jsonLd } from "@/lib/schema";
 
 export function generateStaticParams() {
   return insights.map((i) => ({ slug: i.slug }));
@@ -34,6 +35,45 @@ export async function generateMetadata({
       ...(post.image ? { images: [{ url: post.image, width: 1536, height: 1024 }] } : {}),
     },
   };
+}
+
+// Body paragraphs are plain text by default. A paragraph can start with
+// "## " for an H2 or "### " for an H3 to render as a real subheading
+// instead — this keeps the `body: string[]` shape unchanged for every
+// existing shorter post while letting longer, more structured insights
+// have real section headings.
+function renderBody(body: string[]) {
+  let leadUsed = false;
+  return body.map((raw, i) => {
+    if (raw.startsWith("### ")) {
+      return (
+        <h3 key={i} className="mt-2 text-xl leading-snug text-ink">
+          {raw.slice(4)}
+        </h3>
+      );
+    }
+    if (raw.startsWith("## ")) {
+      return (
+        <h2 key={i} className="mt-6 font-display text-2xl leading-snug text-ink lg:text-3xl">
+          {raw.slice(3)}
+        </h2>
+      );
+    }
+    const isLead = !leadUsed;
+    leadUsed = true;
+    return (
+      <p
+        key={i}
+        className={
+          isLead
+            ? "text-xl leading-relaxed text-ink"
+            : "text-lg leading-relaxed text-taupe"
+        }
+      >
+        {raw}
+      </p>
+    );
+  });
 }
 
 export default async function InsightDetailPage({
@@ -62,6 +102,14 @@ export default async function InsightDetailPage({
           }),
         )}
       />
+
+      {post.faqs && post.faqs.length > 0 && (
+        <Script
+          id={`insight-faq-schema-${post.slug}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLd(faqSchema(post.faqs))}
+        />
+      )}
 
       <article className="pt-36 pb-20 lg:pt-44 lg:pb-28">
         <Container className="max-w-3xl">
@@ -93,37 +141,22 @@ export default async function InsightDetailPage({
 
           {post.scrollReveal ? (
             <ScrollReveal className="mt-10">
-              <div className="space-y-6">
-                {post.body.map((para, i) => (
-                  <p
-                    key={i}
-                    className={
-                      i === 0
-                        ? "text-xl leading-relaxed text-ink"
-                        : "text-lg leading-relaxed text-taupe"
-                    }
-                  >
-                    {para}
-                  </p>
-                ))}
-              </div>
+              <div className="space-y-6">{renderBody(post.body)}</div>
             </ScrollReveal>
           ) : (
             <Reveal delay={0.05} className="mt-10">
               <div className="saucer-rule" />
-              <div className="mt-10 space-y-6">
-                {post.body.map((para, i) => (
-                  <p
-                    key={i}
-                    className={
-                      i === 0
-                        ? "text-xl leading-relaxed text-ink"
-                        : "text-lg leading-relaxed text-taupe"
-                    }
-                  >
-                    {para}
-                  </p>
-                ))}
+              <div className="mt-10 space-y-6">{renderBody(post.body)}</div>
+            </Reveal>
+          )}
+
+          {post.faqs && post.faqs.length > 0 && (
+            <Reveal delay={0.05} className="mt-14">
+              <div className="saucer-rule" />
+              <p className="eyebrow mt-10 mb-3">FAQ</p>
+              <h2 className="text-display-md text-3xl">Common questions</h2>
+              <div className="mt-10">
+                <Accordion items={post.faqs} />
               </div>
             </Reveal>
           )}
