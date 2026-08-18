@@ -28,7 +28,7 @@ export function Hero() {
             Business Growth Consultancy
           </motion.p>
 
-          <h1 className="leading-[1.08] tracking-[-0.01em] text-[clamp(1.5rem,2.3vw,2.5rem)]">
+          <h1 className="leading-[1.08] tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.625rem)]">
             {["Business Solutions Today,", "Business Development for Tomorrow."].map(
               (line, i) => (
                 <span key={line} className="block overflow-hidden">
