@@ -144,7 +144,7 @@ export default async function InsightDetailPage({
               <div className="space-y-6">{renderBody(post.body)}</div>
             </ScrollReveal>
           ) : (
-            <Reveal delay={0.05} className="mt-10">
+            <Reveal delay={0.05} className="mt-10" viewportAmount={0}>
               <div className="saucer-rule" />
               <div className="mt-10 space-y-6">{renderBody(post.body)}</div>
             </Reveal>
