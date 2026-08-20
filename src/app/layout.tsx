@@ -24,7 +24,7 @@ const sans = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Best Marketing Consultancy in Madurai`,
+    default: `${site.name} — Best Marketing Agency in Madurai`,
     template: `%s — ${site.name}`,
   },
   description: `Looking for the best marketing consultancy in Madurai? ${site.description}`,
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    title: `${site.name} — Best Marketing Consultancy in Madurai`,
+    title: `${site.name} — Best Marketing Agency in Madurai`,
     description: site.description,
     url: site.url,
     siteName: site.name,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — Best Marketing Consultancy in Madurai`,
+    title: `${site.name} — Best Marketing Agency in Madurai`,
     description: site.description,
   },
   alternates: { canonical: site.url },
