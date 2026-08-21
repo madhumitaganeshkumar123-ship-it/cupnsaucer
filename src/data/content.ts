@@ -12,72 +12,143 @@ export type Industry = {
 
 export const industries: Industry[] = [
   {
-    slug: "startups",
-    title: "Startups",
-    blurb:
-      "Move from founder intuition to a repeatable model without losing speed.",
-    challenges: [
-      "Finding repeatable, scalable growth",
-      "Building first real processes",
-      "Stretching limited resources",
-    ],
+        slug: "manufacturing",
+        title: "Manufacturing",
+        blurb:
+                "Expand distribution and operational discipline to capture more demand.",
+        challenges: [
+                "Distribution and channel expansion",
+                "Operational efficiency and quality",
+                "Moving from volume to value",
+              ],
   },
   {
-    slug: "smes",
-    title: "SMEs",
-    blurb:
-      "Professionalize the business so it can grow beyond the owner's bandwidth.",
-    challenges: [
-      "Owner-dependence and key-person risk",
-      "Informal processes under strain",
-      "Stalled or inconsistent growth",
-    ],
+        slug: "msmes-family-businesses",
+        title: "MSMEs & Family Businesses",
+        blurb:
+                "Professionalize the business and balance legacy with ambition as the next generation steps in.",
+        challenges: [
+                "Owner-dependence and key-person risk",
+                "Governance and succession planning",
+                "Informal processes under strain",
+              ],
   },
   {
-    slug: "family-businesses",
-    title: "Family Businesses",
-    blurb:
-      "Balance legacy and ambition with structure the next generation can lead.",
-    challenges: [
-      "Governance and role clarity",
-      "Succession and professionalization",
-      "Modernizing without losing values",
-    ],
+        slug: "retail-jewellery",
+        title: "Retail & Jewellery",
+        blurb:
+                "Sharpen the customer experience, inventory discipline, and margins retail and jewellery businesses run on.",
+        challenges: [
+                "Footfall, conversion, and basket size",
+                "Inventory and margin discipline",
+                "Omnichannel and customer loyalty",
+              ],
   },
   {
-    slug: "educational-institutions",
-    title: "Educational Institutions",
-    blurb:
-      "Grow enrollment and reputation through clearer positioning and operations.",
-    challenges: [
-      "Differentiation in a crowded market",
-      "Admissions and enrollment growth",
-      "Operational and brand consistency",
-    ],
+        slug: "food-processing-fmcg",
+        title: "Food Processing & FMCG",
+        blurb:
+                "Build the distribution reach and operational consistency food and FMCG brands need to scale.",
+        challenges: [
+                "Distribution and retail penetration",
+                "Quality consistency at volume",
+                "Brand differentiation on the shelf",
+              ],
   },
   {
-    slug: "retail",
-    title: "Retail Businesses",
-    blurb:
-      "Sharpen the customer experience and the unit economics behind it.",
-    challenges: [
-      "Footfall, conversion, and basket size",
-      "Inventory and margin discipline",
-      "Omnichannel and customer loyalty",
-    ],
+        slug: "educational-institutions",
+        title: "Educational Institutions",
+        blurb:
+                "Grow enrollment and reputation through clearer positioning and operations.",
+        challenges: [
+                "Differentiation in a crowded market",
+                "Admissions and enrollment growth",
+                "Operational and brand consistency",
+              ],
   },
   {
-    slug: "manufacturing",
-    title: "Manufacturing Companies",
-    blurb:
-      "Expand distribution and operational discipline to capture more demand.",
-    challenges: [
-      "Distribution and channel expansion",
-      "Operational efficiency and quality",
-      "Moving from volume to value",
-    ],
+        slug: "healthcare",
+        title: "Healthcare",
+        blurb:
+                "Build patient trust and operational systems that let healthcare providers grow without compromising care.",
+        challenges: [
+                "Patient acquisition and retention",
+                "Operational and staffing consistency",
+                "Trust and reputation building",
+              ],
   },
-];
+  {
+        slug: "hospitality-tourism",
+        title: "Hospitality & Tourism",
+        blurb:
+                "Turn guest experience into repeat business and steady occupancy.",
+        challenges: [
+                "Occupancy and seasonal demand",
+                "Guest experience consistency",
+                "Digital presence and bookings",
+              ],
+  },
+  {
+        slug: "agriculture-fpos",
+        title: "Agriculture & FPOs",
+        blurb:
+                "Build market linkages and operational structure that help farmer collectives and agri-businesses scale.",
+        challenges: [
+                "Market linkages and price realization",
+                "Aggregation and quality standards",
+                "Access to structured financing",
+              ],
+  },
+  {
+        slug: "technology-ai-startups",
+        title: "Technology & AI Startups",
+        blurb:
+                "Move from founder-led product bets to a repeatable go-to-market engine.",
+        challenges: [
+                "Product-market fit validation",
+                "Repeatable go-to-market motion",
+                "Scaling without losing speed",
+              ],
+  },
+  {
+        slug: "professional-services",
+        title: "Professional Services",
+        blurb:
+                "Turn expertise into a scalable practice with structured delivery and client acquisition.",
+        challenges: [
+                "Dependence on a few rainmakers",
+                "Standardizing service delivery",
+                "Predictable client acquisition",
+              ],
+  },
+  {
+        slug: "startups-entrepreneurship",
+        title: "Startups & Entrepreneurship",
+        blurb:
+                "Move from founder intuition to a repeatable model without losing speed.",
+        challenges: [
+                "Finding repeatable, scalable growth",
+                "Building first real processes",
+                "Stretching limited resources",
+              ],
+  },
+]  ;
+
+export type BusinessType = {
+    title: string;
+};
+
+export const businessTypes: BusinessType[] = [
+  { title: "Startups" },
+  { title: "MSMEs" },
+  { title: "Family Businesses" },
+  { title: "Small Businesses" },
+  { title: "Mid-Sized Enterprises" },
+  { title: "Large Enterprises" },
+  { title: "High-Growth Companies" },
+  { title: "D2C Brands" },
+  { title: "Franchises" },
+  ];
 
 export function getIndustry(slug: string) {
   return industries.find((i) => i.slug === slug);
