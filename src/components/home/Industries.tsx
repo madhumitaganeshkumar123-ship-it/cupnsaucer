@@ -10,7 +10,7 @@ export function Industries() {
     <section className="py-20 lg:py-28">
       <Container>
         <SectionHeading
-          eyebrow="Who We Work With"
+          eyebrow="Industries We Serve"
           title="Built for the businesses that build India"
           intro="From first-generation startups to multi-decade family enterprises — we adapt our methods to your model, market, and ambition."
         />
