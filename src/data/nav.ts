@@ -5,7 +5,6 @@ export const mainNav: NavItem[] = [
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
   { label: "Blog", href: "/insights" },
-  { label: "Case Studies", href: "/case-studies" },
   { label: "Resources", href: "/resources" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
