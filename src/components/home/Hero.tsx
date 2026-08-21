@@ -51,7 +51,7 @@ export function Hero() {
           </motion.p>
 
           <h1 className="font-bold leading-[1.05] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]">
-            {["Business Solutions Today,", "Business Development for Tomorrow."].map(
+            {["The Best Business Consultancy", "in Madurai."].map(
               (line, i) => (
                 <span key={line} className="block overflow-hidden">
                   <motion.span
@@ -62,13 +62,13 @@ export function Hero() {
                   >
                     {i === 1 ? (
                       <>
-                        Business Development for{" "}
-                        <span className="italic text-gold">Tomorrow.</span>
+                        in{" "}
+                        <span className="italic text-gold">Madurai.</span>
                       </>
                     ) : (
                       <>
-                        Business Solutions{" "}
-                        <span className="italic text-gold">Today,</span>
+                        The Best Business{" "}
+                        <span className="italic text-gold">Consultancy</span>
                       </>
                     )}
                   </motion.span>
