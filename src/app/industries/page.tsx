@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { Check } from "@/components/ui/Icons";
-import { industries } from "@/data/content";
+import { industries, businessTypes } from "@/data/content";
 
 export const metadata: Metadata = {
   title: "Industries",
@@ -46,10 +46,18 @@ export default function IndustriesPage() {
               </ul>
             </Reveal>
           </Container>
+        
         </section>
       ))}
 
-      <CtaBand />
+            <section className="border-t border-line py-16 lg:py-20">
+                    <Container>
+                              <p className="eyebrow mb-4">Business Types We Support</p>
+                              <p className="max-w-2xl text-taupe">{businessTypes.map((bt) => bt.title).join(" · ")}</p>
+                    </Container>
+            </section>
+    
+    <CtaBand />
     </>
   );
 }
