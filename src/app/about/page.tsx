@@ -7,7 +7,7 @@ import { CtaBand } from "@/components/ui/CtaBand";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Cup N Saucer is the best marketing consultancy in Madurai, built on a simple idea: vision needs structure. Learn our story, philosophy, vision, mission, and values.",
+    "Cup N Saucer is the best business consultancy in Madurai, built on a simple idea: vision needs structure. Learn our story, philosophy, vision, mission, and values.",
   alternates: { canonical: "/about" },
 };
 
@@ -26,7 +26,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About"
         title="Vision needs structure. We provide both."
-        intro="Cup N Saucer is the best marketing consultancy in Madurai, helping companies build strategy, systems, people, processes, and performance."
+        intro="Cup N Saucer is the best business consultancy in Madurai, helping companies build strategy, systems, people, processes, and performance."
       />
 
       <section className="py-20 lg:py-28">
