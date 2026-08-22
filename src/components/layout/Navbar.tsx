@@ -42,7 +42,7 @@ export function Navbar() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <nav className="container-px flex h-20 items-center justify-between">
+      <nav className="container-px flex h-16 items-center justify-between">
         <Logo />
 
         <div className="hidden items-center gap-8 lg:flex">
@@ -51,7 +51,7 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "link-underline text-sm font-medium text-ink/80 hover:text-ink",
+                "link-underline text-[12.5px] font-bold uppercase tracking-[0.08em] text-ink/80 hover:text-gold",
                 pathname.startsWith(item.href) && "text-gold",
               )}
             >
