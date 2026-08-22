@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <span className={cn("relative inline-block h-9 w-9", className)}>
+    <span className={cn("relative inline-block h-12 w-12", className)}>
       <Image
         src="/images/logo-mark.png"
         alt=""
@@ -35,7 +35,7 @@ export function Logo({
       <span className="flex flex-col leading-none">
         <span
           className={cn(
-            "font-display text-2xl font-semibold tracking-tight",
+            "font-display text-3xl font-semibold tracking-tight",
             light ? "text-cream" : "text-ink",
           )}
         >
