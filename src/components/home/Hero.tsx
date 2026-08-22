@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AnimatedLogoMark } from "@/components/home/AnimatedLogoMark";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight } from "@/components/ui/Icons";
 
@@ -23,11 +22,6 @@ export function Hero() {
       {/* soften the seams so the photo melts into the page */}
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-cream to-transparent" />
       <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t from-cream via-cream/90 to-transparent" />
-
-      {/* the animated mark, resting on the floor of the scene */}
-      <div className="absolute left-1/2 top-[51%] h-24 w-24 -translate-x-1/2 -translate-y-1/2 sm:h-28 sm:w-28 lg:h-[7.4rem] lg:w-[7.4rem]">
-        <AnimatedLogoMark />
-      </div>
 
       <div className="absolute inset-x-0 top-[64%] z-10 px-6 text-center">
         <motion.p
