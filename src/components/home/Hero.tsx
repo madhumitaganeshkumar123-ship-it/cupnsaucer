@@ -16,7 +16,7 @@ export function Hero() {
         className="absolute inset-0 bg-cover"
         style={{
           backgroundImage: "url(/images/hero-strategy.jpg)",
-          backgroundPosition: "center 32%",
+          backgroundPosition: "center 52%",
         }}
       />
 
@@ -25,7 +25,7 @@ export function Hero() {
       <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t from-cream via-cream/90 to-transparent" />
 
       {/* the animated mark, resting on the floor of the scene */}
-      <div className="absolute left-1/2 top-[46%] h-36 w-36 -translate-x-1/2 -translate-y-1/2 sm:h-44 sm:w-44 lg:h-52 lg:w-52">
+      <div className="absolute left-1/2 top-[51%] h-24 w-24 -translate-x-1/2 -translate-y-1/2 sm:h-28 sm:w-28 lg:h-[7.4rem] lg:w-[7.4rem]">
         <AnimatedLogoMark />
       </div>
 
