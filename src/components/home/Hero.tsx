@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { AnimatedLogoMark } from "@/components/home/AnimatedLogoMark";
-import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight } from "@/components/ui/Icons";
 
@@ -10,102 +9,74 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 lg:flex lg:min-h-screen lg:items-center lg:pt-44 lg:pb-28">
-      {/* ambient warm wash */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -right-32 -top-24 h-[36rem] w-[36rem] rounded-full bg-gold/5 blur-3xl" />
-        <div className="absolute -left-24 bottom-0 h-96 w-96 rounded-full bg-gold/[0.04] blur-3xl" />
+    <section className="relative h-screen min-h-[620px] w-full overflow-hidden">
+      {/* full-bleed brand photography */}
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-cover"
+        style={{
+          backgroundImage: "url(/images/hero-strategy.jpg)",
+          backgroundPosition: "center 32%",
+        }}
+      />
+
+      {/* soften the seams so the photo melts into the page */}
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-cream to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t from-cream via-cream/90 to-transparent" />
+
+      {/* the animated mark, resting on the floor of the scene */}
+      <div className="absolute left-1/2 top-[46%] h-36 w-36 -translate-x-1/2 -translate-y-1/2 sm:h-44 sm:w-44 lg:h-52 lg:w-52">
+        <AnimatedLogoMark />
       </div>
 
-      {/* faint growth-line pattern, echoing the rising bars in the mark */}
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 h-full w-full opacity-[0.05]"
-      >
-        <defs>
-          <pattern
-            id="heroGrowthLines"
-            width="140"
-            height="140"
-            patternUnits="userSpaceOnUse"
-            patternTransform="rotate(-10)"
-          >
-            <line x1="14" y1="132" x2="14" y2="96" stroke="#A6792E" strokeWidth="4" strokeLinecap="round" />
-            <line x1="38" y1="132" x2="38" y2="72" stroke="#A6792E" strokeWidth="4" strokeLinecap="round" />
-            <line x1="62" y1="132" x2="62" y2="40" stroke="#A6792E" strokeWidth="4" strokeLinecap="round" />
-            <line x1="86" y1="132" x2="86" y2="16" stroke="#A6792E" strokeWidth="4" strokeLinecap="round" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#heroGrowthLines)" />
-      </svg>
+      <div className="absolute inset-x-0 top-[64%] z-10 px-6 text-center">
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease }}
+          className="eyebrow mb-4"
+        >
+          Business Growth Consultancy
+        </motion.p>
 
-      <Container className="grid items-center gap-12 lg:grid-cols-[1.5fr_0.5fr]">
-        <div>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease }}
-            className="eyebrow mb-6"
-          >
-            Business Growth Consultancy
-          </motion.p>
+        <h1 className="mx-auto max-w-5xl font-bold leading-[1.06] tracking-[-0.01em] text-[clamp(1.9rem,4.4vw,3.4rem)]">
+          <span className="block overflow-hidden">
+            <motion.span
+              className="block"
+              initial={{ y: "110%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.9, ease, delay: 0.1 }}
+            >
+              The Best Business <span className="italic text-gold">Consultancy</span>{" "}
+              in <span className="italic text-gold">Madurai.</span>
+            </motion.span>
+          </span>
+        </h1>
 
-          <h1 className="font-bold leading-[1.05] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]">
-            {["The Best Business Consultancy", "in Madurai."].map(
-              (line, i) => (
-                <span key={line} className="block overflow-hidden">
-                  <motion.span
-                    className="block"
-                    initial={{ y: "110%" }}
-                    animate={{ y: 0 }}
-                    transition={{ duration: 0.9, ease, delay: 0.1 + i * 0.12 }}
-                  >
-                    {i === 1 ? (
-                      <>
-                        in{" "}
-                        <span className="italic text-gold">Madurai.</span>
-                      </>
-                    ) : (
-                      <>
-                        The Best Business{" "}
-                        <span className="italic text-gold">Consultancy</span>
-                      </>
-                    )}
-                  </motion.span>
-                </span>
-              ),
-            )}
-          </h1>
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease, delay: 0.45 }}
+          className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-taupe sm:text-base"
+        >
+          Serving businesses in Madurai, Chennai, and other cities — across Tamil
+          Nadu and beyond.
+        </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.5 }}
-            className="mt-7 max-w-xl text-base leading-relaxed text-taupe sm:text-lg"
-          >
-            Serving businesses in Madurai, Chennai, and other cities — across
-            Tamil Nadu and beyond.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.65 }}
-            className="mt-9 flex flex-wrap items-center gap-4"
-          >
-            <Button href="/book-consultation">
-              Book a Strategy Call <ArrowRight className="h-4 w-4" />
-            </Button>
-            <Button href="/services" variant="outline">
-              Explore Services
-            </Button>
-          </motion.div>
-        </div>
-
-        <div className="relative mx-auto hidden aspect-square w-full lg:block lg:max-w-none lg:translate-x-10 lg:scale-150 xl:translate-x-16">
-          <AnimatedLogoMark />
-        </div>
-      </Container>
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease, delay: 0.6 }}
+          className="mt-7 flex flex-wrap items-center justify-center gap-4"
+        >
+          <Button href="/book-consultation">
+            Book a Strategy Call <ArrowRight className="h-4 w-4" />
+          </Button>
+          <Button href="/services" variant="outline">
+            Explore Services
+          </Button>
+        </motion.div>
+      </div>
     </section>
   );
 }
