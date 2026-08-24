@@ -27,6 +27,13 @@ const config: Config = {
           light: "#9A9081",
         },
         line: "#E4DDCD", // hairline on cream
+        // 2026 brand palette — used by the reworked home/services sections
+        burgundy: "#480902",
+        olive: "#937B25",
+        beige: "#E6D1A4",
+        cinnamon: "#CE7939",
+        rust: "#B54B11",
+        paper: "#F7F0E4",
       },
       fontFamily: {
         // Wired up via next/font in layout.tsx (CSS variables)
