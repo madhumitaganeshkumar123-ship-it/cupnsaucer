@@ -63,69 +63,82 @@ export function GrowthFramework() {
             transition={{ duration: 0.9, ease, delay: 0.15 }}
             className="absolute left-1/2 top-1/2 w-[86%] max-w-[380px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-paper p-2 shadow-[0_26px_60px_-30px_rgba(72,9,2,0.55)] lg:left-[38%] lg:top-auto lg:bottom-[4%] lg:translate-x-0 lg:translate-y-0"
           >
-            <svg viewBox="0 0 520 520" className="h-full w-full" role="img" aria-label="Our Growth Partnership Framework">
+            <svg viewBox="0 0 620 620" className="h-full w-full" role="img" aria-label="Our Growth Partnership Framework">
               <style>{`
-                .fw-l{font-family:var(--font-sans),Inter,sans-serif;font-size:15px;font-weight:700;}
-                .fw-n{font-family:var(--font-sans),Inter,sans-serif;font-size:14px;font-weight:700;fill:#F7F0E4;}
-                .fw-c{font-family:var(--font-display),Georgia,serif;font-size:31px;font-weight:700;fill:#480902;}
+                .fw-l{font-family:var(--font-sans),Inter,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.01em;}
+                .fw-n{font-family:var(--font-sans),Inter,sans-serif;font-size:13px;font-weight:700;fill:#F7F0E4;}
+                .fw-c{font-family:var(--font-display),Georgia,serif;font-size:25px;font-weight:700;fill:#480902;}
               `}</style>
               <g strokeWidth="2.5" fill="none">
-                <path d="M260 148V96" stroke="#937B25" />
-                <path d="M357 205l45-26" stroke="#CE7939" />
-                <path d="M357 315l45 26" stroke="#B54B11" />
-                <path d="M260 372v52" stroke="#480902" />
-                <path d="M163 315l-45 26" stroke="#6E5C1B" />
-                <path d="M163 205l-45-26" stroke="#8A3A0D" />
+                <path d="M310 195.5L310 175" stroke="#937B25" />
+                <path d="M409.2 252.8L426.9 242.5" stroke="#CE7939" />
+                <path d="M409.2 367.3L426.9 377.5" stroke="#B54B11" />
+                <path d="M310 424.5L310 445" stroke="#480902" />
+                <path d="M210.8 367.3L193.1 377.5" stroke="#6E5C1B" />
+                <path d="M210.8 252.8L193.1 242.5" stroke="#8A3A0D" />
               </g>
               <g fill="none" strokeWidth="19">
-                <path d="M260 148a112 112 0 0 1 97 56" stroke="#937B25" />
-                <path d="M357 204a112 112 0 0 1 0 112" stroke="#CE7939" />
-                <path d="M357 316a112 112 0 0 1-97 56" stroke="#B54B11" />
-                <path d="M260 372a112 112 0 0 1-97-56" stroke="#480902" />
-                <path d="M163 316a112 112 0 0 1 0-112" stroke="#6E5C1B" />
-                <path d="M163 204a112 112 0 0 1 97-56" stroke="#8A3A0D" />
+                <path d="M310 205A105 105 0 0 1 400.9 257.5" stroke="#937B25" />
+                <path d="M400.9 257.5A105 105 0 0 1 400.9 362.5" stroke="#CE7939" />
+                <path d="M400.9 362.5A105 105 0 0 1 310 415" stroke="#B54B11" />
+                <path d="M310 415A105 105 0 0 1 219.1 362.5" stroke="#480902" />
+                <path d="M219.1 362.5A105 105 0 0 1 219.1 257.5" stroke="#6E5C1B" />
+                <path d="M219.1 257.5A105 105 0 0 1 310 205" stroke="#8A3A0D" />
               </g>
-              <circle cx="260" cy="260" r="101" fill="#F7F0E4" />
-              <text className="fw-c" x="260" y="238" textAnchor="middle">OUR GROWTH</text>
-              <text className="fw-c" x="260" y="270" textAnchor="middle">PARTNERSHIP</text>
-              <text className="fw-c" x="260" y="302" textAnchor="middle">FRAMEWORK</text>
-
-          <circle cx="260" cy="62" r="62" fill="#F7F0E4" stroke="#937B25" strokeWidth="2.5" />
-          <g fill="none" stroke="#937B25" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><circle cx="254" cy="44" r="11"/><path d="M266 56l10 10"/></g>
-          <text className="fw-l" x="260" y="82" textAnchor="middle" fill="#937B25">UNDERSTAND</text>
-          <text className="fw-l" x="260" y="99" textAnchor="middle" fill="#937B25">YOUR BUSINESS</text>
-          <circle cx="260" cy="8" r="15" fill="#937B25" />
-          <text className="fw-n" x="260" y="13" textAnchor="middle">01</text>
-          <circle cx="440" cy="164" r="62" fill="#F7F0E4" stroke="#CE7939" strokeWidth="2.5" />
-          <g fill="none" stroke="#CE7939" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><circle cx="435" cy="146" r="13"/><circle cx="435" cy="146" r="5"/><path d="M444 137l12-12"/></g>
-          <text className="fw-l" x="440" y="184" textAnchor="middle" fill="#CE7939">BUILD</text>
-          <text className="fw-l" x="440" y="201" textAnchor="middle" fill="#CE7939">YOUR BRAND</text>
-          <circle cx="470" cy="118" r="15" fill="#CE7939" />
-          <text className="fw-n" x="470" y="123" textAnchor="middle">02</text>
-          <circle cx="440" cy="356" r="62" fill="#F7F0E4" stroke="#B54B11" strokeWidth="2.5" />
-          <g fill="none" stroke="#B54B11" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><rect x="419" y="326" width="42" height="30" rx="3"/><path d="M428 348l8-9 7 6 8-11"/></g>
-          <text className="fw-l" x="440" y="376" textAnchor="middle" fill="#B54B11">STRENGTHEN</text>
-          <text className="fw-l" x="440" y="393" textAnchor="middle" fill="#B54B11">DIGITAL PRESENCE</text>
-          <circle cx="470" cy="402" r="15" fill="#B54B11" />
-          <text className="fw-n" x="470" y="407" textAnchor="middle">03</text>
-          <circle cx="260" cy="458" r="62" fill="#F7F0E4" stroke="#480902" strokeWidth="2.5" />
-          <g fill="none" stroke="#480902" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M242 442v-14l26-11v36l-26-11z"/><path d="M250 453v5a4 4 0 0 0 8 0v-3"/><path d="M276 428a6 6 0 0 1 0 12"/></g>
-          <text className="fw-l" x="260" y="478" textAnchor="middle" fill="#480902">ACCELERATE</text>
-          <text className="fw-l" x="260" y="495" textAnchor="middle" fill="#480902">SALES & MARKETING</text>
-          <circle cx="260" cy="512" r="15" fill="#480902" />
-          <text className="fw-n" x="260" y="517" textAnchor="middle">04</text>
-          <circle cx="80" cy="356" r="62" fill="#F7F0E4" stroke="#6E5C1B" strokeWidth="2.5" />
-          <g fill="none" stroke="#6E5C1B" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><circle cx="80" cy="332" r="12"/><path d="M80 314v-6M80 356v-6M62 332h-6M104 332h-6M67 319l-4-4M97 349l4 4M97 319l4-4M67 349l-4 4"/></g>
-          <text className="fw-l" x="80" y="376" textAnchor="middle" fill="#6E5C1B">OPTIMIZE</text>
-          <text className="fw-l" x="80" y="393" textAnchor="middle" fill="#6E5C1B">PROCESSES</text>
-          <circle cx="50" cy="402" r="15" fill="#6E5C1B" />
-          <text className="fw-n" x="50" y="407" textAnchor="middle">05</text>
-          <circle cx="80" cy="164" r="62" fill="#F7F0E4" stroke="#8A3A0D" strokeWidth="2.5" />
-          <g fill="none" stroke="#8A3A0D" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M60 156v-12M72 156v-22M84 156v-32"/><path d="M56 160h44"/><path d="M92 134l10-10M96 124h7v7"/></g>
-          <text className="fw-l" x="80" y="184" textAnchor="middle" fill="#8A3A0D">SCALE & LEAD</text>
-          <text className="fw-l" x="80" y="201" textAnchor="middle" fill="#8A3A0D">THE MARKET</text>
-          <circle cx="50" cy="118" r="15" fill="#8A3A0D" />
-          <text className="fw-n" x="50" y="123" textAnchor="middle">06</text>
+              <circle cx="310" cy="310" r="94" fill="#F7F0E4" />
+              <text className="fw-c" x="310" y="288" textAnchor="middle">OUR GROWTH</text>
+              <text className="fw-c" x="310" y="314" textAnchor="middle">PARTNERSHIP</text>
+              <text className="fw-c" x="310" y="340" textAnchor="middle">FRAMEWORK</text>
+              <g>
+                <circle cx="310" cy="105" r="70" fill="#F7F0E4" stroke="#937B25" strokeWidth="2.5" />
+                <g transform="translate(290.0 51.0)" fill="none" stroke="#937B25" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="17" cy="16" r="11"/><path d="M25 24l10 10"/></g>
+                <text className="fw-l" x="310" y="121.0" textAnchor="middle" fill="#937B25">UNDERSTAND</text>
+                <text className="fw-l" x="310" y="137.0" textAnchor="middle" fill="#937B25">YOUR BUSINESS</text>
+                <circle cx="310" cy="35.0" r="15" fill="#937B25" />
+                <text className="fw-n" x="310" y="40.0" textAnchor="middle">01</text>
+              </g>
+              <g>
+                <circle cx="487.5" cy="207.5" r="70" fill="#F7F0E4" stroke="#CE7939" strokeWidth="2.5" />
+                <g transform="translate(467.5 153.5)" fill="none" stroke="#CE7939" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="20" r="12"/><circle cx="18" cy="20" r="5"/><path d="M27 11l9-9"/><path d="M30 2h6v6"/></g>
+                <text className="fw-l" x="487.5" y="223.5" textAnchor="middle" fill="#CE7939">BUILD</text>
+                <text className="fw-l" x="487.5" y="239.5" textAnchor="middle" fill="#CE7939">YOUR BRAND</text>
+                <circle cx="487.5" cy="137.5" r="15" fill="#CE7939" />
+                <text className="fw-n" x="487.5" y="142.5" textAnchor="middle">02</text>
+              </g>
+              <g>
+                <circle cx="487.5" cy="412.5" r="70" fill="#F7F0E4" stroke="#B54B11" strokeWidth="2.5" />
+                <g transform="translate(467.5 356.5)" fill="none" stroke="#B54B11" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="7" width="34" height="23" rx="3"/><path d="M10 24l7-8 6 5 8-10"/></g>
+                <text className="fw-l" x="487.5" y="422.5" textAnchor="middle" fill="#B54B11">STRENGTHEN</text>
+                <text className="fw-l" x="487.5" y="437.5" textAnchor="middle" fill="#B54B11">DIGITAL</text>
+                <text className="fw-l" x="487.5" y="452.5" textAnchor="middle" fill="#B54B11">PRESENCE</text>
+                <circle cx="487.5" cy="342.5" r="15" fill="#B54B11" />
+                <text className="fw-n" x="487.5" y="347.5" textAnchor="middle">03</text>
+              </g>
+              <g>
+                <circle cx="310" cy="515" r="70" fill="#F7F0E4" stroke="#480902" strokeWidth="2.5" />
+                <g transform="translate(290.0 459.0)" fill="none" stroke="#480902" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M6 24V14l22-9v29L6 24z"/><path d="M12 27v5a5 5 0 0 0 10 0v-3"/><path d="M33 14a7 7 0 0 1 0 12"/></g>
+                <text className="fw-l" x="310" y="525.0" textAnchor="middle" fill="#480902">ACCELERATE</text>
+                <text className="fw-l" x="310" y="540.0" textAnchor="middle" fill="#480902">SALES &</text>
+                <text className="fw-l" x="310" y="555.0" textAnchor="middle" fill="#480902">MARKETING</text>
+                <circle cx="310" cy="445.0" r="15" fill="#480902" />
+                <text className="fw-n" x="310" y="450.0" textAnchor="middle">04</text>
+              </g>
+              <g>
+                <circle cx="132.5" cy="412.5" r="70" fill="#F7F0E4" stroke="#6E5C1B" strokeWidth="2.5" />
+                <g transform="translate(112.5 358.5)" fill="none" stroke="#6E5C1B" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="20" cy="20" r="9"/><path d="M20 4v6M20 30v6M4 20h6M30 20h6M9 9l4 4M27 27l4 4M31 9l-4 4M13 27l-4 4"/></g>
+                <text className="fw-l" x="132.5" y="428.5" textAnchor="middle" fill="#6E5C1B">OPTIMIZE</text>
+                <text className="fw-l" x="132.5" y="444.5" textAnchor="middle" fill="#6E5C1B">PROCESSES</text>
+                <circle cx="132.5" cy="342.5" r="15" fill="#6E5C1B" />
+                <text className="fw-n" x="132.5" y="347.5" textAnchor="middle">05</text>
+              </g>
+              <g>
+                <circle cx="132.5" cy="207.5" r="70" fill="#F7F0E4" stroke="#8A3A0D" strokeWidth="2.5" />
+                <g transform="translate(112.5 153.5)" fill="none" stroke="#8A3A0D" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M6 32V22M16 32V14M26 32V6"/><path d="M2 36h34"/><path d="M28 10l8-8M30 2h6v6"/></g>
+                <text className="fw-l" x="132.5" y="223.5" textAnchor="middle" fill="#8A3A0D">SCALE & LEAD</text>
+                <text className="fw-l" x="132.5" y="239.5" textAnchor="middle" fill="#8A3A0D">THE MARKET</text>
+                <circle cx="132.5" cy="137.5" r="15" fill="#8A3A0D" />
+                <text className="fw-n" x="132.5" y="142.5" textAnchor="middle">06</text>
+              </g>
             </svg>
           </motion.div>
         </div>
