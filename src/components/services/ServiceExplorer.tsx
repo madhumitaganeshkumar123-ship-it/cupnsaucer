@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
-import { ArrowUpRight } from "@/components/ui/Icons";
 import { services, serviceCategories } from "@/data/services";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -157,18 +156,17 @@ export function ServiceExplorer() {
               className="mt-6 rounded-2xl border border-line bg-paper p-6 sm:p-8"
             >
               <p className="eyebrow mb-5 text-rust">{open}</p>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {active.map((s) => (
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}
-                    className="group flex h-full flex-col justify-between rounded-xl border border-line bg-cream p-5 transition-all duration-300 hover:border-cinnamon/50 hover:shadow-[0_18px_50px_-30px_rgba(72,9,2,0.35)]"
+                    className="group flex h-full flex-col justify-center rounded-2xl border-2 border-line bg-cream px-8 py-9 transition-all duration-300 hover:-translate-y-1 hover:border-cinnamon hover:bg-paper hover:shadow-[0_22px_55px_-28px_rgba(72,9,2,0.45)]"
                   >
                     <span>
-                      <span className="block font-display text-base text-ink">{s.title}</span>
-                      <span className="mt-2 block text-sm leading-relaxed text-taupe">{s.summary}</span>
+                      <span className="block font-display text-[1.45rem] font-semibold leading-tight text-ink transition-colors group-hover:text-rust">{s.title}</span>
+                      <span className="mt-3 block text-[15px] leading-relaxed text-taupe">{s.summary}</span>
                     </span>
-                    <ArrowUpRight className="mt-5 h-4 w-4 text-rust transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                   </Link>
                 ))}
               </div>
