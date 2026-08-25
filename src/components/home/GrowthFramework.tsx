@@ -7,14 +7,6 @@ import { ArrowRight } from "@/components/ui/Icons";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const capabilities = [
-  { n: "01", label: "Business Strategy & Growth", href: "/services/business-strategy-development" },
-  { n: "02", label: "Sales & Distribution", href: "/services/sales-process-design" },
-  { n: "03", label: "Operational Excellence", href: "/services/process-optimization" },
-  { n: "04", label: "Digital Marketing", href: "/services/digital-marketing-services" },
-  { n: "05", label: "Business Health Checkup", href: "/services" },
-  { n: "06", label: "Market Research & Survey", href: "/services" },
-];
 
 export function GrowthFramework() {
   return (
@@ -159,30 +151,14 @@ export function GrowthFramework() {
 
             <div className="my-6 h-[3px] w-[70px] bg-paper/75" />
 
-            <p className="text-[14.5px] leading-[1.85] text-paper/[0.93]">
+            <p className="text-[15.5px] leading-[1.9] text-paper/[0.93]">
               Looking for a business consultancy in Madurai or Chennai that does more than hand you a deck? Cup N Saucer works with startups, MSMEs, family businesses and growing enterprises across Tamil Nadu to build strategy, systems, people and performance — and then stays until it&rsquo;s actually running.
             </p>
-            <p className="mt-3.5 text-[14.5px] leading-[1.85] text-paper/[0.93]">
+            <p className="mt-5 text-[15.5px] leading-[1.9] text-paper/[0.93]">
               Every engagement is scoped to a specific business problem and measured against outcomes you agreed to up front.
             </p>
 
-            <div className="mt-7 grid gap-x-8 border-t border-paper/[0.34] sm:grid-cols-2">
-              {capabilities.map((c) => (
-                <Link
-                  key={c.n}
-                  href={c.href}
-                  className="group flex items-baseline gap-3 border-b border-paper/[0.34] py-3.5 text-sm font-medium text-paper transition-colors hover:text-white"
-                >
-                  <span className="min-w-[20px] font-display text-[15px] italic text-beige">{c.n}</span>
-                  <span className="flex-1 leading-snug">{c.label}</span>
-                  <span className="-translate-x-1 text-sm text-beige opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100">
-                    &rarr;
-                  </span>
-                </Link>
-              ))}
-            </div>
-
-            <p className="mt-8 font-display text-[clamp(1rem,1.28vw,1.28rem)] font-bold italic leading-[1.4] text-paper lg:whitespace-nowrap">
+            <p className="mt-9 font-display text-[clamp(1rem,1.28vw,1.28rem)] font-bold italic leading-[1.4] text-paper lg:whitespace-nowrap">
               Your challenges become our mission. Your growth becomes our success.
             </p>
 
