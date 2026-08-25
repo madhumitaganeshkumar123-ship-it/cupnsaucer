@@ -169,6 +169,43 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "market-research-survey",
+    category: "Strategy & Growth",
+    title: "Market Survey & Research Assistance",
+    metaTitle: "Market Research & Survey | Madurai & Chennai",
+    metaDescription:
+      "Focused market research for businesses in Madurai and Chennai — competitor mapping, customer insight, and territory potential assessment, scoped to the decision you're facing.",
+    summary:
+      "Competitor mapping, customer insight, and territory assessment — evidence instead of assumption.",
+    problem:
+      "Expansion, pricing, and product decisions are often made on anecdote — what one customer said, or what a competitor appears to be doing — because real market data is expensive and slow to gather.",
+    solution:
+      "We run focused market research tailored to the decision you're facing: competitor mapping, customer and channel interviews, territory potential assessment, and category trend analysis — sized to give you a confident answer without a six-month study.",
+    methodology: [
+      "Define the decision the research needs to inform",
+      "Map competitors, pricing, and positioning in your category",
+      "Gather primary input from customers, channel, and field",
+      "Deliver findings with a clear recommendation",
+    ],
+    outcomes: [
+      "Decisions backed by evidence rather than anecdote",
+      "A clear view of competitor positioning and pricing",
+      "Territory and segment potential quantified",
+    ],
+    faqs: [
+      {
+        question: "How is this different from a full market research agency study?",
+        answer:
+          "We scope research to a specific decision rather than producing an exhaustive report, so it's faster and considerably less expensive while still being rigorous where it matters.",
+      },
+      {
+        question: "Do you cover markets outside Tamil Nadu?",
+        answer:
+          "Yes — we run territory and competitor assessments across South India, and can scope wider where needed.",
+      },
+    ],
+  },
+  {
     slug: "sales-process-design",
     category: "Sales & Distribution",
     title: "Sales Process Design",
@@ -268,6 +305,43 @@ export const services: Service[] = [
         question: "How long is a typical training program?",
         answer:
           "Most programs run as a series of half-day workshops over 3–4 weeks, reinforced with manager coaching afterward.",
+      },
+    ],
+  },
+  {
+    slug: "organizational-development",
+    category: "Organizational Development",
+    title: "Organizational Development",
+    metaTitle: "Organizational Development Consulting | Madurai",
+    metaDescription:
+      "Organizational development for growing businesses in Madurai and Chennai — structure, role clarity, decision rights, and front-line manager capability built for the next stage of growth.",
+    summary:
+      "Structure, roles, and manager capability designed to carry the growth you're planning.",
+    problem:
+      "Businesses outgrow the structure that got them here. Reporting lines blur, decisions bottleneck at the top, and front-line managers are promoted for technical skill without ever being taught to manage.",
+    solution:
+      "We assess how the organization is actually working — structure, role clarity, decision rights, and manager capability — then redesign it around where the business is going, and build the front-line management layer that has to hold it together.",
+    methodology: [
+      "Assess current structure, roles, and decision rights",
+      "Design the target operating structure for the next stage",
+      "Define role charters and lines of accountability",
+      "Build front-line manager capability and review rhythm",
+    ],
+    outcomes: [
+      "A structure that matches the strategy, not the history",
+      "Decisions made at the right level instead of escalating",
+      "Managers equipped to lead, not just to do",
+    ],
+    faqs: [
+      {
+        question: "Will this mean restructuring and letting people go?",
+        answer:
+          "Not usually. Most of the gain comes from clarifying roles, decision rights, and manager capability rather than changing headcount. Where structural change is needed, we plan it with you carefully.",
+      },
+      {
+        question: "How is this different from Performance Management Systems?",
+        answer:
+          "Organizational development sets the structure and capability. Performance management is the goal-setting and review layer that runs inside it. They work well together, and we often sequence them that way.",
       },
     ],
   },
@@ -424,6 +498,43 @@ export const services: Service[] = [
       "Higher retention and repeat business",
       "More referrals and advocacy",
       "A measurable experience standard",
+    ],
+  },
+  {
+    slug: "customer-engagement",
+    category: "Marketing & Customer Growth",
+    title: "Customer Engagement",
+    metaTitle: "Customer Engagement & Retention | Madurai & Chennai",
+    metaDescription:
+      "Customer engagement and retention processes for businesses in Madurai and Chennai — contact cadence, service recovery, and feedback loops that turn one-time buyers into repeat customers.",
+    summary:
+      "Keep the customers you have already won — engagement that turns one-time buyers into repeat ones.",
+    problem:
+      "In a competitive market, unhappy customers quietly become former customers. Most businesses spend heavily to win a customer and then have no deliberate process for keeping them.",
+    solution:
+      "We design the engagement processes that hold a customer relationship together after the sale — contact cadence, service recovery, feedback loops, and loyalty mechanics — so retention stops depending on individual goodwill and starts running on process.",
+    methodology: [
+      "Map the post-sale customer lifecycle",
+      "Identify where customers quietly disengage",
+      "Design contact cadence, recovery, and feedback processes",
+      "Set retention metrics and a review rhythm",
+    ],
+    outcomes: [
+      "Higher repeat purchase and retention",
+      "Complaints surfaced and recovered instead of lost",
+      "Retention that runs on process, not personality",
+    ],
+    faqs: [
+      {
+        question: "How is this different from Customer Experience Design?",
+        answer:
+          "Experience design shapes what the journey feels like end to end. Customer engagement is the ongoing operating rhythm that keeps the relationship alive after the sale — cadence, recovery, and feedback.",
+      },
+      {
+        question: "Do we need a CRM before this is useful?",
+        answer:
+          "No. We design the process first and fit it to whatever you already use. If a CRM turns out to be the right tool, we will help you scope it.",
+      },
     ],
   },
   {
