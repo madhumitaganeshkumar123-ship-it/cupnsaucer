@@ -162,12 +162,20 @@ export function GrowthFramework() {
               Your challenges become our mission. Your growth becomes our success.
             </p>
 
-            <Link
-              href="/book-consultation"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-burgundy px-7 py-3.5 text-[13.5px] font-semibold text-paper transition-opacity hover:opacity-90"
-            >
-              Book a Strategy Call <ArrowRight className="h-4 w-4" />
-            </Link>
+            <div className="mt-7 flex flex-wrap items-center gap-4">
+              <Link
+                href="/book-consultation"
+                className="inline-flex items-center gap-2 rounded-lg bg-burgundy px-7 py-3.5 text-[13.5px] font-semibold text-paper transition-opacity hover:opacity-90"
+              >
+                Book a Strategy Call <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 rounded-lg border border-paper/70 px-7 py-3.5 text-[13.5px] font-semibold text-paper transition-colors hover:bg-paper hover:text-cinnamon"
+              >
+                Services <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </motion.div>
         </div>
 
