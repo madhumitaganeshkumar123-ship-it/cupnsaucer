@@ -1,6 +1,5 @@
 import { Hero } from "@/components/home/Hero";
 import { GrowthFramework } from "@/components/home/GrowthFramework";
-import { Services } from "@/components/home/Services";
 import { Approach } from "@/components/home/Approach";
 import { Industries } from "@/components/home/Industries";
 import { WhyUs } from "@/components/home/WhyUs";
@@ -13,7 +12,6 @@ export default function HomePage() {
     <>
       <Hero />
       <GrowthFramework />
-      <Services />
       <Approach />
       <Industries />
       <WhyUs />
