@@ -5,7 +5,6 @@ import Link from "next/link";
 import Script from "next/script";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { ArticleBody } from "@/components/ui/ArticleBody";
 import { Accordion } from "@/components/ui/Accordion";
@@ -133,28 +132,28 @@ export default async function InsightDetailPage({
           {post.markdown ? (
             <div className="mt-10">
               <div className="saucer-rule" />
-              <ArticleBody markdown={post.markdown} />
-            </div>
-          ) : post.scrollReveal ? (
-            <ScrollReveal className="mt-10">
-              <div className="space-y-6">{renderBody(post.body)}</div>
-            </ScrollReveal>
-          ) : (
-            <Reveal delay={0.05} className="mt-10" viewportAmount={0}>
-              <div className="saucer-rule" />
-              <div className="mt-10 space-y-6">{renderBody(post.body)}</div>
-            </Reveal>
-          )}
-
-          {post.faqs && post.faqs.length > 0 && (
-            <Reveal delay={0.05} className="mt-14">
-              <div className="saucer-rule" />
-              <p className="eyebrow mt-10 mb-3">FAQ</p>
-              <h2 className="text-display-md text-3xl">Common questions</h2>
               <div className="mt-10">
-                <Accordion items={post.faqs} />
+                <ArticleBody markdown={post.markdown} />
               </div>
-            </Reveal>
+            </div>
+          ) : (
+            <div className="mt-10">
+              <div className="saucer-rule" />
+              <div className="mt-10 space-y-6">
+                {post.body.map((para, i) => (
+                  <p
+                    key={i}
+                    className={
+                      i === 0
+                        ? "text-xl leading-relaxed text-ink"
+                        : "text-lg leading-relaxed text-taupe"
+                    }
+                  >
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </div>
           )}
 
           <Reveal className="mt-12 rounded-2xl border border-gold/20 bg-cream-deep/40 p-8">
