@@ -388,7 +388,7 @@ export const insights: Insight[] = [
       "A practical guide to the free AI tools that actually save a small business time — for writing, design, GST billing, WhatsApp and customer support. No budget required.",
     readMinutes: 18,
     date: "2026-08-27",
-    image: "/images/blog-free-ai-tools.jpg",
+    image: "/images/Free Ai tools for marketing.png",
     markdown: freeAiToolsMarkdown,
     body: [
       "You can run the marketing, billing and customer service side of a small business using free AI tools, without paying a rupee in software fees.",
