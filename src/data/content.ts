@@ -1,3 +1,5 @@
+import { freeAiToolsMarkdown } from "./posts/free-ai-tools";
+
 // Industries, the consulting approach, why-choose-us, testimonials,
 // case studies, and insights — all in one content module for easy editing.
 
@@ -361,6 +363,7 @@ export type Insight = {
   faqs?: Faq[];
   image?: string;
   scrollReveal?: boolean;
+  markdown?: string;
 };
 
 export const insightCategories = [
@@ -375,6 +378,49 @@ export const insightCategories = [
 ];
 
 export const insights: Insight[] = [
+  {
+    slug: "free-ai-tools-marketing-billing-customer-service",
+    category: "Digital & AI",
+    title: "Free AI Tools for Marketing, Billing and Customer Service",
+    metaTitle:
+      "Free AI Tools for Marketing, Billing and Customer Service (Guide)",
+    excerpt:
+      "A practical guide to the free AI tools that actually save a small business time — for writing, design, GST billing, WhatsApp and customer support. No budget required.",
+    readMinutes: 18,
+    date: "2026-08-27",
+    image: "/images/blog-free-ai-tools.jpg",
+    markdown: freeAiToolsMarkdown,
+    body: [
+      "You can run the marketing, billing and customer service side of a small business using free AI tools, without paying a rupee in software fees.",
+    ],
+    faqs: [
+      {
+        question: "What are the best free AI tools for a small business?",
+        answer:
+          "Five cover almost everything: ChatGPT or Google Gemini for writing, Canva for design, Zoho Invoice for GST billing, WhatsApp Business for customer messaging, and Tawk.to for website live chat.",
+      },
+      {
+        question: "Which free billing software is best for Indian small businesses?",
+        answer:
+          "Zoho Invoice is the strongest free option. It is completely free rather than a limited tier, and handles GST-compliant invoicing, recurring bills, payment reminders and expense tracking.",
+      },
+      {
+        question: "Is it safe to use free AI tools for business data?",
+        answer:
+          "It is safe for general content like marketing copy. It is not safe for customer personal data, employee records, bank details or login credentials. Remove identifying details first and switch off data training in your settings.",
+      },
+      {
+        question: "Can AI handle customer service on its own?",
+        answer:
+          "No. AI handles repeated questions well, such as hours, location and availability. It handles complaints and unusual requests badly. Use it as a first layer that hands anything unusual to a person quickly.",
+      },
+      {
+        question: "Will free AI tools stay free?",
+        answer:
+          "Some will, some will not. Free tiers have tightened across the industry. Assume any free plan could change within a year, keep exports of anything important, and avoid building critical processes on a plan you cannot replace.",
+      },
+    ],
+  },
   {
     slug: "chennai-isnt-a-bigger-madurai",
     category: "Business Growth",
