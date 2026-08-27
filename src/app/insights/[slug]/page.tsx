@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { CtaBand } from "@/components/ui/CtaBand";
+import { ArticleBody } from "@/components/ui/ArticleBody";
 import { Accordion } from "@/components/ui/Accordion";
 import { ArrowRight, ArrowUpRight } from "@/components/ui/Icons";
 import { insights, getInsight, getRelatedInsights } from "@/data/content";
@@ -129,7 +130,12 @@ export default async function InsightDetailPage({
             </Reveal>
           )}
 
-          {post.scrollReveal ? (
+          {post.markdown ? (
+            <Reveal delay={0.05} className="mt-10">
+              <div className="saucer-rule" />
+              <ArticleBody markdown={post.markdown} />
+            </Reveal>
+          ) : post.scrollReveal ? (
             <ScrollReveal className="mt-10">
               <div className="space-y-6">{renderBody(post.body)}</div>
             </ScrollReveal>
