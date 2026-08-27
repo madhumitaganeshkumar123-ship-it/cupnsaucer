@@ -177,5 +177,36 @@ export function ArticleBody({ markdown }: { markdown: string }) {
   }
 
   flushAll();
-  return <div className="article-body">{out}</div>;
+
+  const toc = lines
+    .map((l) => l.trim())
+    .filter((t) => t.startsWith("## "))
+    .map((t) => t.slice(3).replace(/\*\*/g, "").trim())
+    .filter(Boolean);
+
+  return (
+    <div className="article-body">
+      {toc.length > 2 && (
+        <nav
+          aria-label="Table of contents"
+          className="article-toc mb-12 rounded-2xl border-2 border-line bg-paper px-7 py-7"
+        >
+          <p className="eyebrow mb-4">In this article</p>
+          <ol className="list-decimal space-y-2.5 pl-5 text-[15.5px] leading-relaxed text-taupe marker:text-rust">
+            {toc.map((t, i) => (
+              <li key={`toc-${i}`}>
+                <a
+                  href={`#${slugify(t)}`}
+                  className="underline-offset-2 transition-colors hover:text-rust hover:underline"
+                >
+                  {t}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+      {out}
+    </div>
+  );
 }
