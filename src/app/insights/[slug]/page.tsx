@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { Container } from "@/components/ui/Container";
-import { Reveal } from "@/components/ui/Reveal";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { ArticleBody } from "@/components/ui/ArticleBody";
 import { Accordion } from "@/components/ui/Accordion";
@@ -103,7 +102,7 @@ export default async function InsightDetailPage({
 
       <article className="pt-36 pb-20 lg:pt-44 lg:pb-28">
         <Container className="max-w-3xl">
-          <Reveal>
+          <div>
             <Link href="/insights" className="link-underline text-sm text-gold">
               ← All articles
             </Link>
@@ -112,10 +111,10 @@ export default async function InsightDetailPage({
               <span className="text-taupe-light">{post.readMinutes} min read</span>
             </div>
             <h1 className="mt-4 text-display-lg">{post.title}</h1>
-          </Reveal>
+          </div>
 
           {post.image && (
-            <Reveal delay={0.03} className="mt-10">
+            <div className="mt-10">
               <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl">
                 <Image
                   src={post.image}
@@ -126,7 +125,7 @@ export default async function InsightDetailPage({
                   className="object-cover"
                 />
               </div>
-            </Reveal>
+            </div>
           )}
 
           {post.markdown ? (
@@ -156,7 +155,7 @@ export default async function InsightDetailPage({
             </div>
           )}
 
-          <Reveal className="mt-12 rounded-2xl border border-gold/20 bg-cream-deep/40 p-8">
+          <div className="mt-12 rounded-2xl border border-gold/20 bg-cream-deep/40 p-8">
             <p className="font-display text-xl text-ink">
               Want to apply this to your business?
             </p>
@@ -166,20 +165,20 @@ export default async function InsightDetailPage({
             >
               Book a strategy call <ArrowRight className="h-4 w-4" />
             </Link>
-          </Reveal>
+          </div>
         </Container>
       </article>
 
       {related.length > 0 && (
         <section className="border-t border-line py-16 lg:py-20">
           <Container>
-            <Reveal>
+            <div>
               <p className="eyebrow mb-3">Related Articles</p>
               <h2 className="text-display-md text-3xl">Keep reading</h2>
-            </Reveal>
+            </div>
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {related.map((p, i) => (
-                <Reveal as="article" key={p.slug} delay={i * 0.05}>
+                <article key={p.slug}>
                   <Link
                     href={`/insights/${p.slug}`}
                     className="group flex h-full flex-col rounded-2xl border border-line bg-cream p-8 transition-all duration-300 ease-smooth hover:border-gold/40 hover:shadow-[0_18px_50px_-30px_rgba(20,17,12,0.35)]"
@@ -195,7 +194,7 @@ export default async function InsightDetailPage({
                       <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </span>
                   </Link>
-                </Reveal>
+                </article>
               ))}
             </div>
           </Container>
