@@ -131,10 +131,10 @@ export default async function InsightDetailPage({
           )}
 
           {post.markdown ? (
-            <Reveal delay={0.05} className="mt-10">
+            <div className="mt-10">
               <div className="saucer-rule" />
               <ArticleBody markdown={post.markdown} />
-            </Reveal>
+            </div>
           ) : post.scrollReveal ? (
             <ScrollReveal className="mt-10">
               <div className="space-y-6">{renderBody(post.body)}</div>
